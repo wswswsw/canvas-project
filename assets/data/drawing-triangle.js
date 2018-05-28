@@ -1,6 +1,6 @@
 //incomplete
 
-class DrawingEllipse extends PaintFunction{
+class DrawingTriangle extends PaintFunction{
     constructor(contextReal,contextDraft){
         super();
         this.contextReal = contextReal;
