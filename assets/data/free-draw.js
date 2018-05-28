@@ -1,4 +1,4 @@
-class DrawingLine extends PaintFunction{
+class FreeDraw extends PaintFunction{
     constructor(contextReal){
         super();
         this.context = contextReal;    
@@ -6,7 +6,7 @@ class DrawingLine extends PaintFunction{
     }
     
     onMouseDown(coord,event){
-        this.context.strokeStyle = "#df4b26";
+        this.context.strokeStyle = #000;
         this.context.lineJoin = "round";
         this.context.lineWidth = 5;
         this.context.beginPath();

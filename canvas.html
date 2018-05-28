@@ -25,8 +25,8 @@
     </div>
 
     <div class="buttons">
-        <span class="btn btn-info fas fa-square-full" id="drawing-rectangle">Quadrilateral</span>
-        <span class="btn btn-info fas fa-pencil-alt" id="drawing-line">Free Draw</span>
+        <span class="btn btn-info fas fa-square-full" id="drawing-quadrilateral">Quadrilateral</span>
+        <span class="btn btn-info fas fa-pencil-alt" id="free-draw">Free Draw</span>
         <span class="btn btn-info fas fa-ruler" id="straight-line">Straight Line</span>
         <span class="btn btn-info fas fa-caret-up" id="drawing-triangle">Triangle</span>
         <span class="btn btn-info fas far fa-circle" id="drawing-ellipse">Ellipse</span>
@@ -37,19 +37,19 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
     <script type='text/javascript' src="assets/data/canvas-common.js"></script>
-    <script type='text/javascript' src="assets/data/drawing-line.js"></script>
-    <script type='text/javascript' src="assets/data/drawing-rectangle.js"></script>
+    <script type='text/javascript' src="assets/data/free-draw.js"></script>
+    <script type='text/javascript' src="assets/data/drawing-quadrilateral.js"></script>
     <script type='text/javascript' src="assets/data/drawing-triangle.js"></script>
     <script type='text/javascript' src="assets/data/drawing-ellipse.js"></script>
 
     <script type='text/javascript'>  
 
-        $('#drawing-rectangle').click(() => {
-            currentFunction = new DrawingRectangle(contextReal, contextDraft);
+        $('#drawing-quadrilateral').click(() => {
+            currentFunction = new DrawingQuadrilateral(contextReal, contextDraft);
         });
 
-        $('#drawing-line').click(() => {
-            currentFunction = new DrawingLine(contextReal, contextDraft);
+        $('#free-draw').click(() => {
+            currentFunction = new FreeDraw(contextReal, contextDraft);
         });
 
         $('#straight-line').click(() => {
