@@ -1,5 +1,3 @@
-//incomplete
-
 class Erase extends PaintFunction {
     constructor(contextReal) {
         super();

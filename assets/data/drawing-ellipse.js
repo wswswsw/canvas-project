@@ -1,5 +1,3 @@
-//incomplete
-
 class DrawingEllipse extends PaintFunction{
     constructor(contextReal,contextDraft){
         super();
