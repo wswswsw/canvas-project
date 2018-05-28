@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Canvas Testing</title>
+    <meta name="viewport" content="width= device-width, initial-scale= 1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/stylesheets/main.css">
+
+</head>
+
+<body>
+
+    <div id="canvas-container">
+        <canvas id="canvas-real" class="canvas" width='1280px' height='720px'></canvas>
+        <canvas id="canvas-draft" class="canvas" width='1280px' height='720px'></canvas>
+    </div>
+
+    <div class="buttons">
+        <span class="btn btn-info fas fa-square-full" id="drawing-rectangle">Quadrilateral</span>
+        <span class="btn btn-info fas fa-pencil-alt" id="drawing-line">Free Draw</span>
+        <span class="btn btn-info fas fa-ruler" id="straight-line">Straight Line</span>
+        <span class="btn btn-info fas fa-caret-up" id="drawing-triangle">Triangle</span>
+        <span class="btn btn-info fas far fa-circle" id="drawing-elipse">Elipse</span>
+    </div>
+
+
+    <script type='text/javascript' src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script type='text/javascript' src="assets/data/canvas-common.js"></script>
+    <script type='text/javascript' src="assets/data/drawing-line.js"></script>
+    <script type='text/javascript' src="assets/data/drawing-rectangle.js"></script>
+    <script type='text/javascript' src="assets/data/drawing-triangle.js"></script>
+    <script type='text/javascript' src="assets/data/drawing-ellipse.js"></script>
+
+    <script type='text/javascript'>  
+
+        $('#drawing-rectangle').click(() => {
+            currentFunction = new DrawingRectangle(contextReal, contextDraft);
+        });
+
+        $('#drawing-line').click(() => {
+            currentFunction = new DrawingLine(contextReal, contextDraft);
+        });
+
+        $('#straight-line').click(() => {
+            currentFunction = new StraightLine(contextReal, contextDraft);
+        });
+
+        $('#drawing-triangle').click(() => {
+            currentFunction = new DrawingTriangle(contextReal, contextDraft);
+        });
+
+        $('#drawing-elipse').click(() => {
+            currentFunction = new DrawingEllipse(contextReal, contextDraft);
+        });
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
