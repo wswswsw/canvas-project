@@ -29,7 +29,7 @@
         <span class="btn btn-info fas fa-pencil-alt" id="drawing-line">Free Draw</span>
         <span class="btn btn-info fas fa-ruler" id="straight-line">Straight Line</span>
         <span class="btn btn-info fas fa-caret-up" id="drawing-triangle">Triangle</span>
-        <span class="btn btn-info fas far fa-circle" id="drawing-elipse">Elipse</span>
+        <span class="btn btn-info fas far fa-circle" id="drawing-ellipse">Ellipse</span>
     </div>
 
 
@@ -60,7 +60,7 @@
             currentFunction = new DrawingTriangle(contextReal, contextDraft);
         });
 
-        $('#drawing-elipse').click(() => {
+        $('#drawing-ellipse').click(() => {
             currentFunction = new DrawingEllipse(contextReal, contextDraft);
         });
 
