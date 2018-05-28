@@ -20,8 +20,8 @@
 <body>
 
     <div id="canvas-container">
-        <canvas id="canvas-real" class="canvas" width='1280px' height='720px'></canvas>
-        <canvas id="canvas-draft" class="canvas" width='1280px' height='720px'></canvas>
+        <canvas id="canvas-real" class="canvas" width='1280px' height='500px'></canvas>
+        <canvas id="canvas-draft" class="canvas" width='1280px' height='500px'></canvas>
     </div>
 
     <div class="buttons">
@@ -32,6 +32,9 @@
         <button class="btn btn-info fas far fa-circle" id="drawing-ellipse">Ellipse</button>
         <button class="btn btn-info fab fa-cuttlefish" id="drawing-quadratic">Q. Curve</button>
         <button class="btn btn-info fas fa-eraser" id="erase">Eraser</button>
+        <button class="btn btn-info fas fa-eye-dropper" id="drawing-style">Pen style</button>
+        <button class="btn btn-info fas fa-tape" id="stroke">stroke</button>
+        <input type="text" id="strokewidth" value=1 />
     </div>
 
 
@@ -47,6 +50,8 @@
     <script type='text/javascript' src="assets/data/drawing-quadratic.js"></script>
     <script type='text/javascript' src="assets/data/jscolor.js"></script>
     <script type='text/javascript' src="assets/data/canvas-settings.js"></script>
+    <script type='text/javascript' src="assets/data/stroke.js"></script>
+    <script type='text/javascript' src="assets/data/drawing-style.js"></script>
     <script type='text/javascript'>  
 
         $('#drawing-quadrilateral').click(() => {
@@ -72,7 +77,19 @@
         $('#drawing-quadratic').click(() => {
             currentFunction = new DrawingQuadratic(contextReal, contextDraft);
         });
-        
+
+        $('#stroke').click(() => {
+            currentFunction = new Stroke(contextReal, contextDraft);
+        });
+
+        $("#strokewidth").change(function () {
+            let width = this.value || $(this).value
+            currentFunction = new Stroke(contextReal, contextDraft, width);
+        });
+
+        $('#drawing-style').click(() => {
+            currentFunction = new DrawingStyle(contextReal, contextDraft);
+        });
 
     </script>
 
