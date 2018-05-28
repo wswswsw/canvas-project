@@ -25,22 +25,27 @@
     </div>
 
     <div class="buttons">
-        <span class="btn btn-info fas fa-square-full" id="drawing-quadrilateral">Quadrilateral</span>
-        <span class="btn btn-info fas fa-pencil-alt" id="free-draw">Free Draw</span>
-        <span class="btn btn-info fas fa-ruler" id="straight-line">Straight Line</span>
-        <span class="btn btn-info fas far fa-circle" id="drawing-ellipse">Ellipse</span>
+        <button class="btn btn-info fas fa-palette jscolor" onchange="canvasSettings.changeStroke(this.jscolor)" id="colorStroke"></button>
+        <button class="btn btn-info fas fa-square-full" id="drawing-quadrilateral">Quadrilateral</button>
+        <button class="btn btn-info fas fa-pencil-alt" id="free-draw">Free Draw</button>
+        <button class="btn btn-info fas fa-ruler" id="straight-line">Straight Line</button>
+        <button class="btn btn-info fas far fa-circle" id="drawing-ellipse">Ellipse</button>
+        <button class="btn btn-info fab fa-cuttlefish" id="drawing-quadratic">Q. Curve</button>
+        <button class="btn btn-info fas fa-eraser" id="erase">Eraser</button>
     </div>
 
 
     <script type='text/javascript' src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
+    <script type='text/javascript' src="assets/data/jscolor.js"></script>
     <script type='text/javascript' src="assets/data/canvas-common.js"></script>
+    <script type='text/javascript' src="assets/data/erase.js"></script>
     <script type='text/javascript' src="assets/data/free-draw.js"></script>
     <script type='text/javascript' src="assets/data/drawing-quadrilateral.js"></script>
     <script type='text/javascript' src="assets/data/straight-line.js"></script>
     <script type='text/javascript' src="assets/data/drawing-ellipse.js"></script>
-
+    <script type='text/javascript' src="assets/data/drawing-quadratic.js"></script>
     <script type='text/javascript'>  
 
         $('#drawing-quadrilateral').click(() => {
@@ -59,8 +64,13 @@
             currentFunction = new DrawingEllipse(contextReal, contextDraft);
         });
 
+        $('#erase').click(() => {
+            currentFunction = new Erase(contextReal, contextDraft);
+        });
 
-
+        $('#drawing-quadratic').click(() => {
+            currentFunction = new DrawingQuadratic(contextReal, contextDraft);
+        });
 
 
     </script>
