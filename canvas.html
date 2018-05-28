@@ -28,7 +28,6 @@
         <span class="btn btn-info fas fa-square-full" id="drawing-quadrilateral">Quadrilateral</span>
         <span class="btn btn-info fas fa-pencil-alt" id="free-draw">Free Draw</span>
         <span class="btn btn-info fas fa-ruler" id="straight-line">Straight Line</span>
-        <span class="btn btn-info fas fa-caret-up" id="drawing-triangle">Triangle</span>
         <span class="btn btn-info fas far fa-circle" id="drawing-ellipse">Ellipse</span>
     </div>
 
@@ -40,7 +39,6 @@
     <script type='text/javascript' src="assets/data/free-draw.js"></script>
     <script type='text/javascript' src="assets/data/drawing-quadrilateral.js"></script>
     <script type='text/javascript' src="assets/data/straight-line.js"></script>
-    <script type='text/javascript' src="assets/data/drawing-triangle.js"></script>
     <script type='text/javascript' src="assets/data/drawing-ellipse.js"></script>
 
     <script type='text/javascript'>  
@@ -55,10 +53,6 @@
 
         $('#straight-line').click(() => {
             currentFunction = new StraightLine(contextReal, contextDraft);
-        });
-
-        $('#drawing-triangle').click(() => {
-            currentFunction = new DrawingTriangle(contextReal, contextDraft);
         });
 
         $('#drawing-ellipse').click(() => {
