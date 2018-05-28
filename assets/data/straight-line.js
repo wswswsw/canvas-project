@@ -1,6 +1,3 @@
-//incomplete
-
-
 class StraightLine extends PaintFunction{
     constructor(contextReal,contextDraft){
         super();
@@ -12,19 +9,26 @@ class StraightLine extends PaintFunction{
         this.contextReal.strokeStyle = "#000";
         this.origX = coord[0];
         this.origY = coord[1];
+        this.contextReal.beginPath();
+        this.contextReal.moveTo(this.origX,this.origY);
     }
 
     onDragging(coord,event){
-        this.contextDraft.strokeStyle = "#000";
+        dragging = true;       
+        this.contextDraft.closePath();
         this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
-        this.contextDraft.strokeRect(this.origX,this.origY,coord[0]- this.origX,coord[1] - this.origY)
+        this.contextDraft.beginPath(); 
+        this.contextDraft.moveTo(this.origX,this.origY);
+        this.contextDraft.lineTo(coord[0],coord[1]);
+        this.contextDraft.stroke();
     }
 
     onMouseMove(){}
 
     onMouseUp(coord){
         this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
-        this.contextReal.strokeRect(this.origX,this.origY,coord[0]- this.origX,coord[1] - this.origY)
+        this.contextReal.lineTo(coord[0],coord[1]);
+        this.contextReal.stroke();
     }
     
     onMouseLeave(){}
