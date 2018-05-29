@@ -43,7 +43,7 @@ class DrawingStyle extends PaintFunction {
     }
   }
 
-  onMouseUp() {
+  onMouseUp(coord, event) {
     this.isDrawing = false;
     this.points.length = 0;
   }
