@@ -34,7 +34,6 @@
         <button class="btn btn-info fas fa-eraser" id="erase">Eraser</button>
         <button class="btn btn-info fas fa-eye-dropper" id="drawing-style">Pen style</button>
         <button class="btn btn-info fas fa-tape" id="stroke">Stroke</button>
-        <button class="btn btn-info fas fa-chalkboard" id="clear-canvas">Clear</button>
         <input type="text" id="strokewidth" value=1 />
     </div>
 
@@ -53,7 +52,6 @@
     <script type='text/javascript' src="assets/data/canvas-settings.js"></script>
     <script type='text/javascript' src="assets/data/stroke.js"></script>
     <script type='text/javascript' src="assets/data/drawing-style.js"></script>
-    <script type='text/javascript' src="assets/data/clear-canvas.js"></script>
     <script type='text/javascript'>  
 
         $('#drawing-quadrilateral').click(() => {
@@ -93,9 +91,6 @@
             currentFunction = new DrawingStyle(contextReal, contextDraft);
         });
 
-        $('#clear-canvas').click(() => {
-            currentFunction = new ClearCanvas(contextReal, contextDraft);
-        });
 
     </script>
 
