@@ -8,14 +8,11 @@ class DrawingPolygon extends PaintFunction{
     }
 
     onMouseDown(coord,event){
-        this.contextReal.strokeStyle = strokeColor; //canvas-configuration.js
-        this.contextDraft.strokeStyle = strokeColor;//canvas-configuration.js
+ 
         this.contextReal.lineCap = "round"; //line cap shape
         this.contextDraft.lineCap = "round"; //line cap shape
         this.contextReal.lineJoin = "round";
-        this.contextReal.lineWidth = canvasSettings.brushSize; //canvas-configuration.js
-        this.contextDraft.lineWidth = canvasSettings.brushSize; //canvas-configuration.js
-        this.contextReal.fillStyle = canvasSettings.colorFill; //canvas-configuration.js
+     
 
         //action for the First click
         if (this.actionCount === 0){
@@ -28,6 +25,9 @@ class DrawingPolygon extends PaintFunction{
         }
         dragging = true;
     }
+
+    onMouseMove(){}
+    onMouseLeave(){}
 
     onMouseUp(coord,event){
         if (this.actionCount === 0){
@@ -82,11 +82,12 @@ class DrawingPolygon extends PaintFunction{
         this.contextReal.stroke();
     }
     toDrawDraft(fromX,fromY,toX,toY){
-        this.contextDraft.closePath();
+        
         this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
         this.contextDraft.beginPath(); 
         this.contextDraft.moveTo(fromX,fromY);
         this.contextDraft.lineTo(toX,toY);
+        this.contextDraft.closePath();
         this.contextDraft.stroke();
     }
 
@@ -97,7 +98,15 @@ class DrawingPolygon extends PaintFunction{
         this.contextReal.closePath();
         this.contextReal.beginPath();
         this.contextReal.moveTo(toX,toY);
+        this.contextReal.closePath();
             //this.pointsArr.push(toX,toY);
     }
     
+
+onFinish(){
+    canvasSettings.undoObject.states[canvasSettings.undoObject.actionCount] = new Image();
+    canvasSettings.undoObject.states[canvasSettings.undoObject.actionCount].src = canvasReal.toDataURL();
+    canvasSettings.undoObject.actionCount++;
+}
+
 }
