@@ -47,8 +47,10 @@
         <button class="btn btn-info fas fa-pencil-alt" id="add-text">Add Text</button>
         <!--Button icon will be changed again-->
         <input type="text" id="strokewidth" value=1/>
-        <input class="jscolor" id="colorStroke"/>
-        <button> </button>
+        <button class="btn btn-info fas fa-palette">
+            Pick a color
+            <input class="jscolor" id="colorStroke" />
+        </button>
     </div>
 
 
@@ -122,7 +124,6 @@
         $('#polygon').click(() => {
             currentFunction = new DrawingPolygon(contextReal, contextDraft);
         });
-
 
 
     </script>
