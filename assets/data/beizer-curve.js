@@ -8,7 +8,7 @@ class DrawingBezier extends PaintFunction{
     onMouseDown(coord,event){
         this.origX = coord[0];
         this.orgiY = coord[1];
-        this.context.strokeStyle = canvasSettings.colorStroke;    
+        this.context.strokeStyle = strokeColor;   
         this.context.lineJoin = "round";
         this.context.lineCap = "round"; //lineCap = "butt" or "round"
         this.context.lineWidth = canvasSettings.brushSize; //Changes stroke size

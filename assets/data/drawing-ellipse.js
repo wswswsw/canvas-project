@@ -6,14 +6,14 @@ class DrawingEllipse extends PaintFunction{
     }
     
     onMouseDown(coord,event){
-        this.contextReal.strokeStyle = "#000";
+        this.contextReal.strokeStyle = strokeColor;
         this.contextReal.beginPath();
         this.origX = coord[0];
         this.origY = coord[1];
     }
 
     onDragging(coord,event){
-        this.contextDraft.strokeStyle = "#000";
+        this.contextDraft.strokeStyle = strokeColor;
         this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height); //- to clear draft context before redrawing
         this.contextDraft.beginPath();        
         this.contextDraft.ellipse(this.origX, this.origY, Math.abs(coord[0]- this.origX), Math.abs(coord[1] - this.origY), 0 * Math.PI/180, 0, 2 * Math.PI) // rotation hardcoded as zero - essentially drawing an arc from zero @ x-axis to 2pi;

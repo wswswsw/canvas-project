@@ -8,8 +8,8 @@ class DrawingPolygon extends PaintFunction{
     }
 
     onMouseDown(coord,event){
-        this.contextReal.strokeStyle = canvasSettings.colorStroke; //canvas-configuration.js
-        this.contextDraft.strokeStyle = canvasSettings.colorStroke; //canvas-configuration.js
+        this.contextReal.strokeStyle = strokeColor; //canvas-configuration.js
+        this.contextDraft.strokeStyle = strokeColor;//canvas-configuration.js
         this.contextReal.lineCap = "round"; //line cap shape
         this.contextDraft.lineCap = "round"; //line cap shape
         this.contextReal.lineJoin = "round";

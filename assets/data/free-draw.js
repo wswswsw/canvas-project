@@ -1,32 +1,32 @@
-class FreeDraw extends PaintFunction{
-    constructor(contextReal){
+class FreeDraw extends PaintFunction {
+    constructor(contextReal) {
         super();
-        this.context = contextReal;    
-        this.contextDraft = contextDraft;                    
+        this.context = contextReal;
+        this.contextDraft = contextDraft;
     }
-    
-    onMouseDown(coord,event){
-        this.context.strokeStyle = "#000";
+
+    onMouseDown(coord, event) {
+        this.context.strokeStyle = strokeColor;
         this.context.lineJoin = "round";
         this.context.lineWidth = 1;
         this.context.beginPath();
-        this.context.moveTo(coord[0],coord[1]);
-        this.draw(coord[0],coord[1]);
-    }
-    
-    onDragging(coord,event){
-        this.draw(coord[0],coord[1]);
+        this.context.moveTo(coord[0], coord[1]);
+        this.draw(coord[0], coord[1]);
     }
 
-    onMouseMove(){}
-    onMouseUp(){}
-    onMouseLeave(){}
-    onMouseEnter(){}
+    onDragging(coord, event) {
+        this.draw(coord[0], coord[1]);
+    }
 
-    draw(x,y){
-        this.context.lineTo(x,y);
-        this.context.moveTo(x,y);
+    onMouseMove() { }
+    onMouseUp() { }
+    onMouseLeave() { }
+    onMouseEnter() { }
+
+    draw(x, y) {
+        this.context.lineTo(x, y);
+        this.context.moveTo(x, y);
         this.context.closePath();
-        this.context.stroke();    
+        this.context.stroke();
     }
 }

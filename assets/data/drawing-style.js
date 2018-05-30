@@ -26,7 +26,7 @@ class DrawingStyle extends PaintFunction {
       this.context.canvas.height
     );
     this.context.lineJoin = this.context.lineCap = "round";
-    this.context.fillStyle = "#08CCF9";
+    this.context.fillStyle = strokeColor;
 
     for (var i = 0; i < this.points.length; i++) {
       this.context.beginPath();

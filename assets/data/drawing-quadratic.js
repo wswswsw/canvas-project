@@ -10,7 +10,8 @@ class DrawingQuadratic extends PaintFunction {
 
   onMouseDown(coord, event) {
     if (this.actionCounter === 0) {
-      this.contextReal.strokeStyle = "#000";
+      this.contextReal.strokeStyle = strokeColor;
+      this.contextDraft.strokeStyle = strokeColor;
       this.origX = coord[0];
       this.origY = coord[1];
       this.contextReal.beginPath();

@@ -7,7 +7,7 @@ class Stroke extends PaintFunction {
   }
 
   onMouseDown(coord, event) {
-    this.context.strokeStyle = "#000";
+    this.context.strokeStyle = strokeColor;
     this.context.lineJoin = "round";
     this.context.lineWidth = this.lineWidth;
     this.context.beginPath();

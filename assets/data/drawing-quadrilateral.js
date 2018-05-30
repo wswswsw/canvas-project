@@ -6,13 +6,13 @@ class DrawingQuadrilateral extends PaintFunction {
     }
 
     onMouseDown(coord, event) {
-        this.contextReal.strokeStyle = canvasSettings.colorStroke;
+        this.contextReal.strokeStyle = strokeColor;
         this.origX = coord[0];
         this.origY = coord[1];
     }
 
     onDragging(coord, event) {
-        this.contextDraft.strokeStyle = canvasSettings.colorStroke;
+        this.contextDraft.strokeStyle = strokeColor;
         this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
         this.contextDraft.strokeRect(this.origX, this.origY, coord[0] - this.origX, coord[1] - this.origY)
     }
