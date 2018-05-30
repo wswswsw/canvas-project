@@ -47,14 +47,7 @@
         <button class="btn btn-info fas fa-pencil-alt" id="add-text">Add Text</button>
         <!--Button icon will be changed again-->
         <input type="text" id="strokewidth" value=1/>
-        <div class="fas fa-palette">
-            Pick a color
-            <input class="jscolor" id="colorStroke" />
-        </div>
-        <div class="fas fa-palette">
-            Change the background
-            <input class="jscolor" id="backgroundColor" />
-        </div>
+        <input class="jscolor" id="colorStroke"/>
     </div>
 
 
@@ -63,7 +56,8 @@
     <script type='text/javascript' src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-    <script type='text/javascript' src="assets/data/canvas-settings.js"></script>
+        <script type='text/javascript' src="assets/data/canvas-settings.js"></script>
+
     <script type='text/javascript' src="assets/data/canvas-common.js"></script>
     <script src="assets/data/jscolor.js"></script>
     <script type='text/javascript' src="assets/data/erase.js"></script>
@@ -128,17 +122,21 @@
         $('#polygon').click(() => {
             currentFunction = new DrawingPolygon(contextReal, contextDraft);
         });
-        
-        $('#clear').click(() => {
-            currentFunction = new Clear(contextReal, contextDraft);
-        });
 
-        $('#add-text').click(() => {
-            currentFunction = new AddText(contextReal, contextDraft);
-        });
+
 
     </script>
 
 </body>
+
+<style>
+    body {
+        background-color: ivory;
+    }
+
+    canvas {
+        border: 1px solid ivory;
+    }
+</style>
 
 </html>
