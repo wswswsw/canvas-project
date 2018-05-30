@@ -47,10 +47,14 @@
         <button class="btn btn-info fas fa-pencil-alt" id="add-text">Add Text</button>
         <!--Button icon will be changed again-->
         <input type="text" id="strokewidth" value=1/>
-        <button class="btn btn-info fas fa-palette">
+        <div class="fas fa-palette">
             Pick a color
             <input class="jscolor" id="colorStroke" />
-        </button>
+        </div>
+        <div class="fas fa-palette">
+            Change the background
+            <input class="jscolor" id="backgroundColor" />
+        </div>
     </div>
 
 
@@ -129,15 +133,5 @@
     </script>
 
 </body>
-
-<style>
-    body {
-        background-color: ivory;
-    }
-
-    canvas {
-        border: 1px solid ivory;
-    }
-</style>
 
 </html>
