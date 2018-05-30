@@ -128,7 +128,14 @@
         $('#polygon').click(() => {
             currentFunction = new DrawingPolygon(contextReal, contextDraft);
         });
+        
+        $('#clear').click(() => {
+            currentFunction = new Clear(contextReal, contextDraft);
+        });
 
+        $('#add-text').click(() => {
+            currentFunction = new AddText(contextReal, contextDraft);
+        });
 
     </script>
 
