@@ -40,9 +40,11 @@
             <label for="pensize">Stroke width</label>
             <input type="range" min="1" max="40" value="5" class="slider" id="pensize" />
         </div>
-        <button class="btn btn-info fas fa-i-cursor" id="beizer-curve">Bezier Curve</button>
+        <button class="btn btn-info fas fa-i-cursor" id="bezier-curve">Bezier Curve</button>
         <!--Button icon will be changed again-->
         <button class="btn btn-info fas fa-retweet" id="polygon">Polygon</button>
+        <button class="btn btn-info fas fa-eraser" id="clear">Clear</button>
+        <button class="btn btn-info fas fa-pencil-alt" id="add-text">Add Text</button>
         <!--Button icon will be changed again-->
         <input type="text" id="strokewidth" value=1/>
         <input class="jscolor" id="colorStroke"/>
@@ -69,8 +71,10 @@
     <script type='text/javascript' src="assets/library/exif.js"></script>
     <script type='text/javascript' src="assets/library/canvas-image-uploader.js"></script>
     <script type='text/javascript' src="assets/data/uploadImage.js"></script>
-    <script type='text/javascript' src="assets/data/beizer-curve.js"></script>
+    <script type='text/javascript' src="assets/data/bezier-curve.js"></script>
     <script type='text/javascript' src="assets/data/polygon.js"></script>
+    <script type='text/javascript' src="assets/data/clear.js"></script>
+    <script type='text/javascript' src="assets/data/add-text.js"></script>
 
     <script type='text/javascript'>  
 
@@ -111,7 +115,7 @@
             currentFunction = new DrawingStyle(contextReal, contextDraft);
         });
 
-        $('#beizer-curve').click(() => {
+        $('#bezier-curve').click(() => {
             currentFunction = new DrawingBezier(contextReal, contextDraft);
         });
 
