@@ -3,7 +3,8 @@ body {
 }
 
 .canvas {
-  border: 1px dotted black;;
+  border: 1px dotted black;
+  background-color: ivory;
   position: absolute;
   top: 0px;
   bottom: 0px;
