@@ -21,9 +21,11 @@
 <body>
 
     <div id="canvas-container">
+        <canvas id="canvas-background" class="canvas" width='1280px' height='500px'></canvas>
+        <canvas id="preview-canvas" class="canvas" height="0" width="0"></canvas>
         <canvas id="canvas-real" class="canvas" width='1280px' height='500px'></canvas>
         <canvas id="canvas-draft" class="canvas" width='1280px' height='500px'></canvas>
-        <canvas id="preview-canvas" height="0" width="0"></canvas>
+
     </div>
 
     <div class="buttons">
@@ -34,7 +36,6 @@
         <button class="btn btn-info fab fa-cuttlefish" id="drawing-quadratic">Q. Curve</button>
         <button class="btn btn-info fas fa-eraser" id="erase">Eraser</button>
         <button class="btn btn-info fas fa-eye-dropper" id="drawing-style">Pen style</button>
-        <button class="btn btn-info fas fa-eye-dropper" id="object-move">>Mouse</button>
         <input id="uploadImage" type="file" name="photo" />
         <div class="slideContainer">
             <label for="pensize">Stroke width</label>
@@ -47,7 +48,11 @@
         <button class="btn btn-info fas fa-pencil-alt" id="add-text">Add Text</button>
         <!--Button icon will be changed again-->
         <input type="text" id="strokewidth" value=1/>
-        <input class="jscolor" id="colorStroke"/>
+        <input class="jscolor" id="colorStroke" />
+        <div class="fas fa-palette">
+            Change the background
+            <input class="jscolor" id="backgroundColor" />
+        </div>
     </div>
 
 
@@ -56,7 +61,7 @@
     <script type='text/javascript' src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-        <script type='text/javascript' src="assets/data/canvas-settings.js"></script>
+    <script type='text/javascript' src="assets/data/canvas-settings.js"></script>
 
     <script type='text/javascript' src="assets/data/canvas-common.js"></script>
     <script src="assets/data/jscolor.js"></script>

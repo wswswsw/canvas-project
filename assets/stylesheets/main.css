@@ -4,7 +4,7 @@ body {
 
 .canvas {
   border: 1px dotted black;
-  background-color: ivory;
+  /* background-color: ivory; dont add background into canvas*/
   position: absolute;
   top: 0px;
   bottom: 0px;
@@ -20,4 +20,17 @@ body {
 }
 #canvas-container {
   height: 500px;
+}
+
+#canvas-background {
+  z-index: 1;
+}
+
+#preview-canvas {
+  z-index: 2;
+}
+
+#canvas-real,
+#canvas-draft {
+  z-index: 3;
 }

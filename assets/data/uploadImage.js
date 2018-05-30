@@ -1,7 +1,8 @@
 var uploader = new CanvasImageUploader({
-  maxSize: 700,
   jpegQuality: 0.7
 });
+
+var maxSize = $("#canvas-real").height() || 500;
 
 $("#uploadImage").bind("change", function onImageChanged(e) {
   var files = e.target.files || e.dataTransfer.files;
@@ -13,7 +14,7 @@ $("#uploadImage").bind("change", function onImageChanged(e) {
 
       var canvas = $canvas[0];
       // Render the preview from your original canvas...
-      uploader.copyToCanvas(canvas, $("#preview-canvas"), 700);
+      uploader.copyToCanvas(canvas, $("#preview-canvas"), maxSize);
       uploader.saveCanvasToImageData(canvas);
     });
   }
