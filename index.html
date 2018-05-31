@@ -25,10 +25,12 @@
         <canvas id="preview-canvas" class="canvas" height="0" width="0"></canvas>
         <canvas id="canvas-real" class="canvas" width='1280px' height='500px'></canvas>
         <canvas id="canvas-draft" class="canvas" width='1280px' height='500px'></canvas>
+        
 
     </div>
 
     <div class="buttons">
+
         <button class="btn btn-info fas fa-square-full" id="drawing-quadrilateral">Quadrilateral</button>
         <button class="btn btn-info fas fa-pencil-alt" id="free-draw">Free Draw</button>
         <button class="btn btn-info fas fa-ruler" id="straight-line">Straight Line</button>
@@ -42,18 +44,24 @@
             <input type="range" min="1" max="40" value="5" class="slider" id="pensize" />
         </div>
         <button class="btn btn-info fas fa-i-cursor" id="bezier-curve">Bezier Curve</button>
-        <!--Button icon will be changed again-->
+            <!--Button icon will be changed again-->
         <button class="btn btn-info fas fa-retweet" id="polygon">Polygon</button>
         <button class="btn btn-info fas fa-eraser" id="clear">Clear</button>
         <button class="btn btn-info fas fa-pencil-alt" id="add-text">Add Text</button>
-        <!--Button icon will be changed again-->
+            <!--Button icon will be changed again-->
         <input type="text" id="strokewidth" value=1/>
         <input class="jscolor" id="colorStroke" />
         <div class="fas fa-palette">
-            Change the background
-            <input class="jscolor" id="backgroundColor" />
+           <!--Change the background -->
+            <input class="jscolor" id="backgroundColor">
         </div>
-    </div>
+        <button class = "btn btn-info fas fa-arrow-down" id="download">
+            <a  href="#" download="my-file-name.png"> 
+                </a>
+        </button>
+
+        </div>
+    
 
 
 
@@ -62,8 +70,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
     <script type='text/javascript' src="assets/data/canvas-settings.js"></script>
-
     <script type='text/javascript' src="assets/data/canvas-common.js"></script>
+    
     <script src="assets/data/jscolor.js"></script>
     <script type='text/javascript' src="assets/data/erase.js"></script>
     <script type='text/javascript' src="assets/data/free-draw.js"></script>
@@ -80,6 +88,7 @@
     <script type='text/javascript' src="assets/data/polygon.js"></script>
     <script type='text/javascript' src="assets/data/clear.js"></script>
     <script type='text/javascript' src="assets/data/add-text.js"></script>
+    <script type='text/javascript' src="assets/data/download.js"></script>
 
     <script type='text/javascript'>  
 
@@ -128,6 +137,7 @@
             currentFunction = new DrawingPolygon(contextReal, contextDraft);
         });
 
+     
 
 
     </script>
