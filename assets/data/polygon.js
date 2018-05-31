@@ -49,7 +49,7 @@ class DrawingPolygon extends PaintFunction{
                 this.polygonFillTest();
                 //console.log('Points array '+JSON.stringify(this.pointsArr));
                 this.pointsArr = [];
-                this.onFinish();//Stores undo state
+                //this.onFinish();  //Stores undo state
                 this.actionCount = 0;
             } else {
                 this.newX = coord[0];
@@ -103,10 +103,10 @@ class DrawingPolygon extends PaintFunction{
     }
     
 
-onFinish(){
-    canvasSettings.undoObject.states[canvasSettings.undoObject.actionCount] = new Image();
-    canvasSettings.undoObject.states[canvasSettings.undoObject.actionCount].src = canvasReal.toDataURL();
-    canvasSettings.undoObject.actionCount++;
+//onFinish(){
+    //canvasSettings.undoObject.states[canvasSettings.undoObject.actionCount] = new Image();
+    //canvasSettings.undoObject.states[canvasSettings.undoObject.actionCount].src = canvasReal.toDataURL();
+    //canvasSettings.undoObject.actionCount++;
 }
 
-}
+
