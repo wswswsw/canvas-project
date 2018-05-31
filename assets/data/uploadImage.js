@@ -2,7 +2,7 @@ var uploader = new CanvasImageUploader({
   jpegQuality: 0.7
 });
 
-var maxSize = $("#canvas-real").height() || 500;
+var maxSize = 1000;
 
 $("#uploadImage").bind("change", function onImageChanged(e) {
   var files = e.target.files || e.dataTransfer.files;

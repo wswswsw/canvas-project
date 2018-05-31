@@ -1,28 +1,96 @@
 body {
-  background-color: ivory;
+  background-color: #f1f2f2;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  overflow-y: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.topnav {
+  background-color: #8d69f9;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.banner {
+  background: url("file:///Users/Lea/Desktop/canvas-project/assets/img/7861.jpg")
+    no-repeat center center;
+  background-size: cover;
+  background-color: #e2e2e2;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+.title {
+  color: #ffffff;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+}
+
+.sub-title {
+  color: #ffffff;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.get-start {
+  color: #8d69f9;
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 7px 15px 7px 15px;
+  border-radius: 300px;
+  border-color: #ffffff;
+  font-size: 2vh;
+  font-weight: 800;
+  margin-top: 5vh;
 }
 
 .canvas {
   border: 1px dotted black;
   /* background-color: ivory; dont add background into canvas*/
   position: absolute;
-  top: 0px;
+  /* top: 333px;
   bottom: 0px;
   left: 0px;
-  right: 0px;
+  right: 0px; */
 }
 
 #canvas-draft {
   background-color: transparent;
 }
-body {
-  overflow: hidden;
-}
+
 #canvas-container {
   height: 500px;
 }
 
 #canvas-background {
+  background-color: white;
   z-index: 1;
 }
 

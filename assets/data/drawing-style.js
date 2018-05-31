@@ -1,9 +1,8 @@
 class DrawingStyle extends PaintFunction {
-  constructor(contextReal, contextDraft, width) {
+  constructor(contextReal, contextDraft) {
     super();
     this.context = contextReal;
     this.contextDraft = contextDraft;
-    this.lineWidth = width;
     this.isDrawing = false;
     this.points = [];
     this.radius = 15;

@@ -15,80 +15,164 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="assets/stylesheets/main.css">
     <link rel="stylesheet" href="assets/stylesheets/stroke.css">
+    <link rel="icon" type="assets/img/icon.png" href="assets/img/icon.png" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-colorselector.css" />
+
 
 </head>
 
 <body>
 
-    <div id="canvas-container">
-        <canvas id="canvas-background" class="canvas" width='1280px' height='500px'></canvas>
-        <canvas id="preview-canvas" class="canvas" height="0" width="0"></canvas>
-        <canvas id="canvas-real" class="canvas" width='1280px' height='500px'></canvas>
-        <canvas id="canvas-draft" class="canvas" width='1280px' height='500px'></canvas>
-        
-
+    <div class="topnav">
+        <a class="topnavbar" href="#">
+            <img src="assets/img/icon2.png" width="104" height="23" class="d-inline-block align-top" alt="">
+        </a>
     </div>
 
-    <div class="buttons">
-
-        <button class="btn btn-info fas fa-square-full" id="drawing-quadrilateral">Quadrilateral</button>
-        <button class="btn btn-info fas fa-pencil-alt" id="free-draw">Free Draw</button>
-        <button class="btn btn-info fas fa-ruler" id="straight-line">Straight Line</button>
-        <button class="btn btn-info fas far fa-circle" id="drawing-ellipse">Ellipse</button>
-        <button class="btn btn-info fab fa-cuttlefish" id="drawing-quadratic">Q. Curve</button>
-        <button class="btn btn-info fas fa-eraser" id="erase">Eraser</button>
-        <button class="btn btn-info fas fa-eye-dropper" id="drawing-style">Pen style</button>
-        <input id="uploadImage" type="file" name="photo" />
-        <div class="slideContainer">
-            <label for="pensize">Stroke width</label>
-            <input type="range" min="1" max="40" value="5" class="slider" id="pensize" />
+    <div class="banner">
+        <div class="container">
+            <h1 class="title">Lets Draw</h1>
+            <p class="sub-title">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            <a href="#button_container" class="get-start">GET START NOW</a>
         </div>
-        <button class="btn btn-info fas fa-i-cursor" id="bezier-curve">Bezier Curve</button>
-            <!--Button icon will be changed again-->
-        <button class="btn btn-info fas fa-retweet" id="polygon">Polygon</button>
-        <button class="btn btn-info fas fa-eraser" id="clear">Clear</button>
-        <button class="btn btn-info fas fa-pencil-alt" id="add-text">Add Text</button>
-            <!--Button icon will be changed again-->
-        <input type="text" id="strokewidth" value=1/>
-        <input class="jscolor" id="colorStroke" />
-        <div class="fas fa-palette">
-           <!--Change the background -->
-            <input class="jscolor" id="backgroundColor">
+    </div>
+    <div class="ui labeled icon mini menu" id="button_container" style="margin: 0px;background: #8d69f9;border-color:white;border-radius: 0%;height: 60px;">
+        <button class="item" id="drawing-quadrilateral" style="color:white;">
+            <i class="pencil alternate icon " style="color:white;"></i> Quadrilateral
+        </button>
+        <button class="item" id="free-draw" style="color:white;">
+            <i class="pencil alternate icon " style="color:white;"></i> Free Draw
+        </button>
+
+        <button class="item" id="straight-line" style="color:white;">
+            <i class="pencil alternate icon " style="color:white;"></i> Straight Line
+        </button>
+        <button class="item" id="drawing-ellipse" style="color:white;">
+            <i class="pencil alternate icon " style="color:white;"></i> Ellipse
+        </button>
+        <button class="item" id="drawing-quadratic" style="color:white;">
+            <i class="pencil alternate icon " style="color:white;"></i> Q. Curve
+        </button>
+        <button class="item" id="erase" style="color:white;">
+            <i class="pencil alternate icon " style="color:white;"></i> Eraser
+        </button>
+        <button class="item" id="drawing-style" style="color:white;">
+            <i class="pencil alternate icon " style="color:white;"></i> Pen style
+        </button>
+        <div class="item slideContainer " style="color:white;">
+            <label for="pensize ">Stroke width</label>
+            <input type="range" min="1" max="40" value="5" class="slider " id="pensize" />
+        </div>
+
+        <button class="item" id="bezier-curve" style="color:white;">
+            <i class="pencil alternate icon " style="color:white;"></i> Bezier Curve
+        </button>
+        <button class="item" id="polygon" style="color:white;">
+            <i class="pencil alternate icon " style="color:white;"></i> Polygon
+        </button>
+        <button class="item" id="clear" style="color:white;">
+            <i class="pencil alternate icon " style="color:white;"></i> Clear
+        </button>
+        <button class="item" id="add-text" style="color:white;">
+            <i class="pencil alternate icon " style="color:white;"></i> Add Text
+        </button>
+        <button class="item">
+
+            <div class="fas fa-palette " style="color:white;">
+                Background Color
+                <br/>
+                <input class="jscolor" id="backgroundColor" />
+            </div>
+        </button>
+        </button>
+        <button class="item">
+            <div class="fas fa-palette " style="color:white;">
+                Object Color
+                <br/>
+                <input class="jscolor " id="colorStroke" />
+            </div>
+        </button>
+        <button class="item">
+            <i class="pencil alternate icon " style="color:white;"></i> Upload
+            <input id="uploadImage" type="file" name="photo" />
+        </button>
+        <!-- <button class="item">
+            <button class="btn btn-info fas fa-arrow-down" id="download">
+                <a href="#" download="my-file-name.png">
+                </a>
+            </button>
+        </button> -->
+    </div>
+
+
+
+    <!-- <div class="buttons ">
+        <button class="btn btn-info fas fa-square-full " id="drawing-quadrilateral">Quadrilateral</button>
+        <button class="btn btn-info fas fa-pencil-alt ">Free Draw</button>
+        <button class="btn btn-info fas fa-ruler " id="straight-line">Straight Line</button>
+        <button class="btn btn-info fas far fa-circle " id="drawing-ellipse">Ellipse</button>
+        <button class="btn btn-info fab fa-cuttlefish " id="drawing-quadratic">Q. Curve</button>
+        <button class="btn btn-info fas fa-eraser " id="erase">Eraser</button>
+        <button class="btn btn-info fas fa-eye-dropper " id="drawing-style">Pen style</button>
+        <button class="btn btn-info fas fa-i-cursor " id="bezier-curve">Bezier Curve</button>
+
+        <button class="btn btn-info fas fa-retweet " id="polygon">Polygon</button>
+        <button class="btn btn-info fas fa-eraser " id="clear">Clear</button>
+        <button class="btn btn-info fas fa-pencil-alt " id="add-text">Add Text</button>
+
+        <input class="jscolor " id="colorStroke" />
+        <div class="fas fa-palette ">
+            Change the background
+            <input class="jscolor" id="backgroundColor" />
         </div>
         <button class = "btn btn-info fas fa-arrow-down" id="download">
             <a  href="#" download="my-file-name.png"> 
                 </a>
         </button>
 
-        </div>
-    
+</div> -->
+
+
+    <div id="canvas-container ">
+        <canvas id="canvas-background" class="canvas " width='1480px' height='700px'></canvas>
+        <canvas id="preview-canvas" class="canvas " width='1480px' height='700px'></canvas>
+        <canvas id="canvas-real" class="canvas " width='1480px' height='700px'></canvas>
+        <canvas id="canvas-draft" class="canvas " width='1480px' height='700px'></canvas>
+
+    </div>
 
 
 
 
-    <script type='text/javascript' src="https://code.jquery.com/jquery-3.2.1.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
-    <script type='text/javascript' src="assets/data/canvas-settings.js"></script>
-    <script type='text/javascript' src="assets/data/canvas-common.js"></script>
-    
-    <script src="assets/data/jscolor.js"></script>
-    <script type='text/javascript' src="assets/data/erase.js"></script>
-    <script type='text/javascript' src="assets/data/free-draw.js"></script>
-    <script type='text/javascript' src="assets/data/drawing-quadrilateral.js"></script>
-    <script type='text/javascript' src="assets/data/straight-line.js"></script>
-    <script type='text/javascript' src="assets/data/drawing-ellipse.js"></script>
-    <script type='text/javascript' src="assets/data/drawing-quadratic.js"></script>
-    <script type='text/javascript' src="assets/data/stroke.js"></script>
-    <script type='text/javascript' src="assets/data/drawing-style.js"></script>
-    <script type='text/javascript' src="assets/library/exif.js"></script>
-    <script type='text/javascript' src="assets/library/canvas-image-uploader.js"></script>
-    <script type='text/javascript' src="assets/data/uploadImage.js"></script>
-    <script type='text/javascript' src="assets/data/bezier-curve.js"></script>
-    <script type='text/javascript' src="assets/data/polygon.js"></script>
-    <script type='text/javascript' src="assets/data/clear.js"></script>
-    <script type='text/javascript' src="assets/data/add-text.js"></script>
-    <script type='text/javascript' src="assets/data/download.js"></script>
+
+
+
+
+    <script type='text/javascript' src="https://code.jquery.com/jquery-3.2.1.js "></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa "
+        crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+    <script type='text/javascript' src="assets/data/canvas-settings.js "></script>
+
+    <script type='text/javascript' src="assets/data/canvas-common.js "></script>
+    <script src="assets/data/jscolor.js "></script>
+    <script type='text/javascript' src="assets/data/erase.js "></script>
+    <script type='text/javascript' src="assets/data/free-draw.js "></script>
+    <script type='text/javascript' src="assets/data/drawing-quadrilateral.js "></script>
+    <script type='text/javascript' src="assets/data/straight-line.js "></script>
+    <script type='text/javascript' src="assets/data/drawing-ellipse.js "></script>
+    <script type='text/javascript' src="assets/data/drawing-quadratic.js "></script>
+    <script type='text/javascript' src="assets/data/stroke.js "></script>
+    <script type='text/javascript' src="assets/data/drawing-style.js "></script>
+    <script type='text/javascript' src="assets/library/exif.js "></script>
+    <script type='text/javascript' src="assets/library/canvas-image-uploader.js "></script>
+    <script type='text/javascript' src="assets/data/uploadImage.js "></script>
+    <script type='text/javascript' src="assets/data/bezier-curve.js "></script>
+    <script type='text/javascript' src="assets/data/polygon.js "></script>
+    <script type='text/javascript' src="assets/data/clear.js "></script>
+    <script type='text/javascript' src="assets/data/add-text.js "></script>
+    <script type='text/javascript' src="assets/data/download.js "></script>
 
     <script type='text/javascript'>  
 
@@ -120,7 +204,7 @@
             currentFunction = new Stroke(contextReal, contextDraft);
         });
 
-        $("#strokewidth, #pensize").change(function () {
+        $("#strokewidth, #pensize ").change(function () {
             let width = this.value || $(this).value
             currentFunction = new Stroke(contextReal, contextDraft, width);
         });
@@ -137,7 +221,6 @@
             currentFunction = new DrawingPolygon(contextReal, contextDraft);
         });
 
-     
 
 
     </script>
@@ -146,11 +229,11 @@
 
 <style>
     body {
-        background-color: ivory;
+        background-color: #F1F2F2;
     }
 
     canvas {
-        border: 1px solid ivory;
+        border: 1px solid #F1F2F2;
     }
 </style>
 
