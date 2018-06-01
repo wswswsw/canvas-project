@@ -15,9 +15,7 @@ class Erase extends PaintFunction {
 
     onDragging(coord, event) {
         this.context.globalCompositeOperation = "destination-out";
-      
         this.draw(coord[0], coord[1]);
-
         this.context.globalCompositeOperation = "source-over";
     }
 

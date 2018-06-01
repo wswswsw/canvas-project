@@ -1,49 +1,49 @@
 class DrawingBezier extends PaintFunction {
     constructor(contextReal, contextDraft) {
-    super();
-    this.contextReal = contextReal;
-    this.contextDraft = contextDraft;
-    this.dPoint = {}
-    this.drag
-    this.point = {
-    p1: {
-    x: 100,
-    y: 250
-    },
-    p2: {
-    x: 400,
-    y: 250
-    },
-    cp1: {
-    x: 200,
-    y: 100
-    },
-    cp2: {
-    x: 300,
-    y: 100
+        super();
+        this.contextReal = contextReal;
+        this.contextDraft = contextDraft;
+        this.dPoint = {}
+        this.drag
+        this.point = {
+            p1: {
+                x: 100,
+                y: 250
+            },
+            p2: {
+                x: 400,
+                y: 250
+            },
+            cp1: {
+                x: 200,
+                y: 100
+            },
+            cp2: {
+                x: 300,
+                y: 100
+            }
+        }
+        this.firstClick = true;
+        this.style = {
+            curve: {
+                width: 1,
+                color: this.strokeColor
+            },
+            cpline: {
+                width: 1,
+                color: this.strokeColor
+            },
+            point: {
+                radius: 10,
+                width: 2,
+                color: "#900",
+                fill: "rgba(200,200,200,0.5)",
+                arc1: 0,
+                arc2: 2 * Math.PI
+            }
+        }
     }
-    }
-    this.firstClick = true;
-    this.style = {
-    curve: {
-    width: 1,
-    color: this.strokeColor
-    },
-    cpline: {
-    width: 1,
-    color: this.strokeColor
-    },
-    point: {
-    radius: 10,
-    width: 2,
-    color: "#900",
-    fill: "rgba(200,200,200,0.5)",
-    arc1: 0,
-    arc2: 2 * Math.PI
-    }
-    }
-    }
-    
+
     onMouseDown(coord, event) {
         if (this.firstClick) {
             this.startPoint(coord)
@@ -75,7 +75,7 @@ class DrawingBezier extends PaintFunction {
     onMouseUp(coord, event) {
         this.draw(this.contextDraft);
     }
-    
+
     startPoint(coord) {
         let a = coord[0]
         let b = coord[1]
@@ -98,7 +98,7 @@ class DrawingBezier extends PaintFunction {
             }
         }
     }
-    
+
     onDblClick() {
         contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
         this.drawReal();
@@ -113,7 +113,7 @@ class DrawingBezier extends PaintFunction {
         contextReal.bezierCurveTo(this.point.cp1.x, this.point.cp1.y, this.point.cp2.x, this.point.cp2.y, this.point.p2.x, this.point.p2.y);
         contextReal.stroke();
     }
-    
+
     draw(ctx) {
         ctx.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
         // control lines
@@ -144,7 +144,7 @@ class DrawingBezier extends PaintFunction {
         }
     }
 
-    onMouseMove() {}
-    onMouseLeave() {}
-    onMouseEnter() {}
-    }
+    onMouseMove() { }
+    onMouseLeave() { }
+    onMouseEnter() { }
+}

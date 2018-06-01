@@ -1,5 +1,3 @@
-//incomplete
-
 class DrawingQuadratic extends PaintFunction {
   constructor(contextReal, contextDraft) {
     super();
@@ -34,7 +32,9 @@ class DrawingQuadratic extends PaintFunction {
         this.endX,
         this.endY
       );
+
       this.contextDraft.stroke();
+
     } else if (this.actionCounter === 1) {
       this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
       this.contextDraft.beginPath();
@@ -45,8 +45,10 @@ class DrawingQuadratic extends PaintFunction {
         this.endX,
         this.endY
       );
+
       this.contextDraft.stroke();
     }
+
     var layer = new Konva.Layer();
     var dragLayer = new Konva.Layer();
 
@@ -56,7 +58,7 @@ class DrawingQuadratic extends PaintFunction {
 
     stage.add(layer, dragLayer);
 
-    stage.on("dragstart", function(evt) {
+    stage.on("dragstart", function (evt) {
       var shape = evt.target;
       // moving to another layer will improve dragging performance
       shape.moveTo(dragLayer);
@@ -65,19 +67,22 @@ class DrawingQuadratic extends PaintFunction {
       if (tween) {
         tween.pause();
       }
+
       shape.setAttrs({
         shadowOffset: {
           x: 15,
           y: 15
         },
+
         scale: {
           x: shape.getAttr("startScale") * 1.2,
           y: shape.getAttr("startScale") * 1.2
         }
+
       });
     });
 
-    stage.on("dragend", function(evt) {
+    stage.on("dragend", function (evt) {
       var shape = evt.target;
       shape.moveTo(layer);
       stage.draw();
@@ -92,11 +97,12 @@ class DrawingQuadratic extends PaintFunction {
     });
   }
 
-  onMouseMove() {}
+  onMouseMove() { }
 
   onMouseUp(coord, event) {
     if (this.actionCounter === 0) {
       this.actionCounter = 1;
+
     } else if (this.actionCounter === 1) {
       this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
       this.contextReal.quadraticCurveTo(
@@ -105,12 +111,13 @@ class DrawingQuadratic extends PaintFunction {
         this.endX,
         this.endY
       );
+
       this.contextReal.stroke();
       this.actionCounter = 0;
       this.onFinish();
     }
   }
 
-  onMouseLeave() {}
-  onMouseEnter() {}
+  onMouseLeave() { }
+  onMouseEnter() { }
 }

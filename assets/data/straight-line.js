@@ -1,37 +1,37 @@
-class StraightLine extends PaintFunction{
-    constructor(contextReal,contextDraft){
+class StraightLine extends PaintFunction {
+    constructor(contextReal, contextDraft) {
         super();
         this.contextReal = contextReal;
-        this.contextDraft = contextDraft;            
+        this.contextDraft = contextDraft;
     }
-    
-    onMouseDown(coord,event){
+
+    onMouseDown(coord, event) {
         this.contextReal.strokeStyle = strokeColor;
         this.contextDraft.strokeStyle = strokeColor;
         this.origX = coord[0];
         this.origY = coord[1];
         this.contextReal.beginPath();
-        this.contextReal.moveTo(this.origX,this.origY);
+        this.contextReal.moveTo(this.origX, this.origY);
     }
 
-    onDragging(coord,event){
-        dragging = true;       
+    onDragging(coord, event) {
+        dragging = true;
         this.contextDraft.closePath();
-        this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
-        this.contextDraft.beginPath(); 
-        this.contextDraft.moveTo(this.origX,this.origY);
-        this.contextDraft.lineTo(coord[0],coord[1]);
+        this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
+        this.contextDraft.beginPath();
+        this.contextDraft.moveTo(this.origX, this.origY);
+        this.contextDraft.lineTo(coord[0], coord[1]);
         this.contextDraft.stroke();
     }
 
-    onMouseMove(){}
+    onMouseMove() { }
 
-    onMouseUp(coord){
-        this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
-        this.contextReal.lineTo(coord[0],coord[1]);
+    onMouseUp(coord) {
+        this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
+        this.contextReal.lineTo(coord[0], coord[1]);
         this.contextReal.stroke();
     }
-    
-    onMouseLeave(){}
-    onMouseEnter(){}
+
+    onMouseLeave() { }
+    onMouseEnter() { }
 }

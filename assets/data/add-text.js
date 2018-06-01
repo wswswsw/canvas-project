@@ -12,26 +12,26 @@ var canvas = document.getElementById('myCanvas'),
     font = '14px sans-serif',
     hasInput = false;
 
-canvas.onclick = function(e) {
+canvas.onclick = function (e) {
     if (hasInput) return;
     addInput(e.clientX, e.clientY);
 }
 
 function addInput(x, y) {
-    
+
     var input = document.createElement('input');
-    
+
     input.type = 'text';
     input.style.position = 'fixed';
     input.style.left = (x - 4) + 'px';
     input.style.top = (y - 4) + 'px';
 
     input.onkeydown = handleEnter;
-    
+
     document.body.appendChild(input);
 
     input.focus();
-    
+
     hasInput = true;
 }
 

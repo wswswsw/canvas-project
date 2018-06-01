@@ -24,6 +24,7 @@ class DrawingStyle extends PaintFunction {
       this.context.canvas.width,
       this.context.canvas.height
     );
+
     this.context.lineJoin = this.context.lineCap = "round";
     this.context.fillStyle = strokeColor;
 
@@ -37,8 +38,10 @@ class DrawingStyle extends PaintFunction {
         Math.PI * 2,
         false
       );
+
       this.context.fill();
       this.context.stroke();
+
     }
   }
 
@@ -46,8 +49,9 @@ class DrawingStyle extends PaintFunction {
     this.isDrawing = false;
     this.points.length = 0;
   }
-  onMouseLeave() {}
-  onMouseEnter() {}
+  
+  onMouseLeave() { }
+  onMouseEnter() { }
 
   draw(x, y) {
     this.context.lineTo(x, y);
