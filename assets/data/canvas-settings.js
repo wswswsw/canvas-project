@@ -9,3 +9,4 @@ $("#backgroundColor").change(e => {
     backgroundColor: (backgroundColor = "#" + e.target.value)
   });
 });
+

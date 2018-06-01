@@ -29,4 +29,5 @@ class FreeDraw extends PaintFunction {
         this.context.closePath();
         this.context.stroke();
     }
+
 }

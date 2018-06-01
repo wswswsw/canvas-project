@@ -98,10 +98,10 @@
             <input id="uploadImage" type="file" name="photo" />
         </button>
 
-        <div class="item" id="undoRedoGroup">
+        <!-- <div class="item" id="undoRedoGroup">
             <button class="fas fa-undo"> Undo </button>
             <button class="fas fa-redo"> Redo </button>
-        </div>
+        </div> -->
 
 
         <!-- <button class="item">
@@ -163,7 +163,6 @@
     <script type='text/javascript' src="assets/data/canvas-settings.js "></script>
 
     <script type='text/javascript' src="assets/data/canvas-common.js "></script>
-    <script type='text/javascript' src="assets/data/undo.js "></script>
     <script src="assets/library/jscolor.js "></script>
     <script type='text/javascript' src="assets/data/erase.js "></script>
     <script type='text/javascript' src="assets/data/free-draw.js "></script>
@@ -228,8 +227,6 @@
         $('#polygon').click(() => {
             currentFunction = new DrawingPolygon(contextReal, contextDraft);
         });
-
-
 
     </script>
 
