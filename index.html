@@ -122,7 +122,7 @@
 
         <button class="btn btn-info fas fa-retweet " id="polygon">Polygon</button>
         <button class="btn btn-info fas fa-eraser " id="clear">Clear</button>
-        <button class="btn btn-info fas fa-pencil-alt " id="add-text">Add Text</button>
+        <button class="btn btn-info fas fa-pencil-alt " id="add-text">AddText</button>
 
         <input class="jscolor " id="colorStroke" />
         <div class="fas fa-palette ">
@@ -222,6 +222,14 @@
 
         $('#polygon').click(() => {
             currentFunction = new DrawingPolygon(contextReal, contextDraft);
+        });
+        
+          $('#clear').click(() => {
+            currentFunction = new Clear(contextReal, contextDraft);
+        });
+
+         $('#add-text').click(() => {
+            currentFunction = new AddText(contextReal, contextDraft);
         });
 
     </script>
