@@ -45,6 +45,7 @@
             <i class="pencil alternate icon " style="color:white;"></i> Free Draw
         </button>
 
+
         <button class="item" id="straight-line" style="color:white;">
             <i class="pencil alternate icon " style="color:white;"></i> Straight Line
         </button>
@@ -64,7 +65,6 @@
             <label for="pensize ">Stroke width</label>
             <input type="range" min="1" max="40" value="5" class="slider " id="pensize" />
         </div>
-
         <button class="item" id="bezier-curve" style="color:white;">
             <i class="pencil alternate icon " style="color:white;"></i> Bezier Curve
         </button>
@@ -98,10 +98,10 @@
             <input id="uploadImage" type="file" name="photo" />
         </button>
 
-         <button class="item">
-            <a class="btn btn-info fas fa-arrow-down"  id="download" href="#" download="my-file-name.jpeg">
-                </a>
-                    </button> 
+        <button class="item">
+            <a class="btn btn-info fas fa-arrow-down" id="download" href="#" download="my-file-name.jpeg">
+            </a>
+        </button>
 
     </div>
 
@@ -220,8 +220,6 @@
         $('#polygon').click(() => {
             currentFunction = new DrawingPolygon(contextReal, contextDraft);
         });
-
-
 
     </script>
 
