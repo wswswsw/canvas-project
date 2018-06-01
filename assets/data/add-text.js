@@ -4,7 +4,7 @@ class AddText extends PaintFunction{
         this.contextReal = contextReal;
         this.contextDraft = contextDraft;
         this.fontWeight = 600; //font weight
-        this.fontSize = 18; //font size
+        this.fontSize = 30; //font size
         this.fontStyle = "Arial"; //font-family
         this.fillStyle = "black"; //font color
         this.textX = [];
@@ -21,7 +21,6 @@ class AddText extends PaintFunction{
         this.fontStartY = this.textY[0] - this.fontSize;
         $('#textInput').css({"display":"block","transform":"translateY("+coord[1]+"px) translateX("+coord[0]+"px)","font-size":this.fontSize+"px","color":this.fillStyle,"font-family":this.fontStyle,"font-weight":this.fontWeight,"padding":"0","border-style":"dotted"});
        
-        
         //If user click outside the input box, text will be printed on the canvas real
         
         if ((this.textX.length > 1) && (event.target.id != $('#textInput'))){
@@ -33,19 +32,13 @@ class AddText extends PaintFunction{
     //Print the text on the canvas real
     outputText(ctx){
         let inputText = $('#textInput').val();
+        this.fontSize = 30; //font size
         contextReal.fillText(inputText,this.textX[0],this.textY[0]+parseInt(this.fontSize));
-
-    //Enter event 
-    //mark one point on the canvas -then 
     
-    
-
-    
-        //contextReal.stroke();
+       //contextReal.stroke();
         $('#textInput').css({"display":"none","transform":"translateY(0) translateX(0)"});
         $('#textInput').val('');
 
-   
         //$('body').find('input[type=text],input').val('');
         this.textX= [];
         this.textY = [];
