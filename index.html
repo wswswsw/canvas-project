@@ -98,6 +98,11 @@
             <input id="uploadImage" type="file" name="photo" />
         </button>
 
+        <div id="undoRedoGroup">
+            <button class="undo">Undo</button>
+            <button class="redo">Redo</button>
+        </div>
+
 
         <button class="item">
             <a class="btn btn-info fas fa-arrow-down" id="download" href="#" download="my-file-name.jpeg">
@@ -157,7 +162,7 @@
         crossorigin="anonymous "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
     <script type='text/javascript' src="assets/data/canvas-settings.js "></script>
-
+    <script type='text/javascript' src="assets/data/undo.js "></script>
     <script type='text/javascript' src="assets/data/canvas-common.js "></script>
     <script src="assets/library/jscolor.js "></script>
     <script type='text/javascript' src="assets/data/erase.js "></script>
@@ -223,6 +228,10 @@
         $('#polygon').click(() => {
             currentFunction = new DrawingPolygon(contextReal, contextDraft);
         });
+
+        undoObject.states[ndoObject.actionCount] = new Image();
+        undoObject.states[undoObject.actionCount].src = canvasReal.toDataURL();
+        undoObject.actionCount++;
 
     </script>
 
