@@ -12,6 +12,8 @@ class DrawingPolygon extends PaintFunction{
         this.contextReal.lineCap = "round"; //line cap shape
         this.contextDraft.lineCap = "round"; //line cap shape
         this.contextReal.lineJoin = "round";
+        this.contextDraft.strokeStyle = strokeColor;
+        this.contextReal.strokeStyle = strokeColor;
      
 
         //action for the First click
