@@ -98,12 +98,10 @@
             <input id="uploadImage" type="file" name="photo" />
         </button>
 
-
-        <!-- <button class="item">
-            <button class="btn btn-info fas fa-arrow-down" id="download">
-                <a href="#" download="my-file-name.png">
+         <button class="item">
+            <a class="btn btn-info fas fa-arrow-down"  id="download" href="#" download="my-file-name.jpeg">
                 </a>
-                    </button>  -->
+                    </button> 
 
     </div>
 
@@ -156,8 +154,9 @@
         crossorigin="anonymous "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
     <script type='text/javascript' src="assets/data/canvas-settings.js "></script>
+
     <script type='text/javascript' src="assets/data/canvas-common.js "></script>
-    <script type='text/javascript' src="assets/library/jscolor.js "></script>
+    <script src="assets/library/jscolor.js "></script>
     <script type='text/javascript' src="assets/data/erase.js "></script>
     <script type='text/javascript' src="assets/data/free-draw.js "></script>
     <script type='text/javascript' src="assets/data/drawing-quadrilateral.js "></script>
@@ -221,6 +220,7 @@
         $('#polygon').click(() => {
             currentFunction = new DrawingPolygon(contextReal, contextDraft);
         });
+
 
 
     </script>
