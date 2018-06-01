@@ -1,52 +1,54 @@
-//how to combine the class into my functions? // 
-
-class AddText extends PaintFunction {
-    constructor(contextReal, contextDraft) {
+class AddText extends PaintFunction{
+    constructor(contextReal,contextDraft){
         super();
         this.contextReal = contextReal;
         this.contextDraft = contextDraft;
+        this.fontWeight = 600; //font weight
+        this.fontSize = 18; //font size
+        this.fontStyle = "Arial"; //font-family
+        this.fillStyle = "black"; //font color
+        this.textX = [];
+        this.textY = [];
     }
     
-var canvas = document.getElementById('myCanvas'),
-    ctx = canvas.getContext('2d'),
-    font = '14px sans-serif',
-    hasInput = false;
+//onMouseDown -textbox comes out 
+    onMouseDown(coord,event){
+        this.textX.push(coord[0]);
+        this.textY.push(coord[1]);
 
-canvas.onclick = function (e) {
-    if (hasInput) return;
-    addInput(e.clientX, e.clientY);
-}
-
-function addInput(x, y) {
-
-    var input = document.createElement('input');
-
-    input.type = 'text';
-    input.style.position = 'fixed';
-    input.style.left = (x - 4) + 'px';
-    input.style.top = (y - 4) + 'px';
-
-    input.onkeydown = handleEnter;
-
-    document.body.appendChild(input);
-
-    input.focus();
-
-    hasInput = true;
-}
-
-function handleEnter(e) {
-    var keyCode = e.keyCode;
-    if (keyCode === 13) {
-        drawText(this.value, parseInt(this.style.left, 10), parseInt(this.style.top, 10));
-        document.body.removeChild(this);
-        hasInput = false;
+       
+        //Make the input box appear on the clicked area
+        this.fontStartY = this.textY[0] - this.fontSize;
+        $('#textInput').css({"display":"block","transform":"translateY("+coord[1]+"px) translateX("+coord[0]+"px)","font-size":this.fontSize+"px","color":this.fillStyle,"font-family":this.fontStyle,"font-weight":this.fontWeight,"padding":"0","border-style":"dotted"});
+       
+        
+        //If user click outside the input box, text will be printed on the canvas real
+        
+        if ((this.textX.length > 1) && (event.target.id != $('#textInput'))){
+            this.outputText(this.contextReal);  
+        }
     }
-}
 
-function drawText(txt, x, y) {
-    ctx.textBaseline = 'top';
-    ctx.textAlign = 'left';
-    ctx.font = font;
-    ctx.fillText(txt, x - 4, y - 4);
+
+    //Print the text on the canvas real
+    outputText(ctx){
+        let inputText = $('#textInput').val();
+        contextReal.fillText(inputText,this.textX[0],this.textY[0]+parseInt(this.fontSize));
+
+    //Enter event 
+    //mark one point on the canvas -then 
+    
+    
+
+    
+        //contextReal.stroke();
+        $('#textInput').css({"display":"none","transform":"translateY(0) translateX(0)"});
+        $('#textInput').val('');
+
+   
+        //$('body').find('input[type=text],input').val('');
+        this.textX= [];
+        this.textY = [];
+    }
+
 }
