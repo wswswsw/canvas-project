@@ -102,3 +102,12 @@ body {
 #canvas-draft {
   z-index: 3;
 }
+
+#textInput{
+	display: none;
+	position: absolute;
+	z-index: 5;
+	background-color: transparent;
+	background-image: none;
+	border: 1px dotted gray;
+}
