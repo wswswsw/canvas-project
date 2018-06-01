@@ -54,6 +54,14 @@ $("#canvas-draft").mouseenter(function(e) {
   }
 });
 
+$('#canvas-draft').dblclick(function(e) {
+  dragging = false;
+  let mouseX = e.pageX - this.offsetLeft;
+  let mouseY = e.pageY - this.offsetTop;
+  currentFunction.onDblClick([mouseX, mouseY], e);
+  });
+
+
 class PaintFunction {
   constructor() {}
   onMouseDown() {}

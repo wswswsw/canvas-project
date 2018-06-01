@@ -104,13 +104,13 @@ class DrawingBezier extends PaintFunction {
         this.drawReal();
         this.firstClick = true;
     }
-    
+
     drawReal() {
         contextReal.lineWidth = this.lineWidth;
         contextReal.strokeStyle = this.strokeColor;
         contextReal.beginPath();
         contextReal.moveTo(this.point.p1.x, this.point.p1.y);
-        ctx.bezierCurveTo(this.point.cp1.x, this.point.cp1.y, this.point.cp2.x, this.point.cp2.y, this.point.p2.x, this.point.p2.y);
+        contextReal.bezierCurveTo(this.point.cp1.x, this.point.cp1.y, this.point.cp2.x, this.point.cp2.y, this.point.p2.x, this.point.p2.y);
         contextReal.stroke();
     }
     
@@ -143,6 +143,7 @@ class DrawingBezier extends PaintFunction {
             ctx.stroke();
         }
     }
+
     onMouseMove() {}
     onMouseLeave() {}
     onMouseEnter() {}
