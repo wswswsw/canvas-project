@@ -24,7 +24,7 @@
 
 <body>
 
-    <div class="topnav">
+    <div class="topnav sticky">
         <a class="topnavbar" href="#">
             <img src="assets/img/icon2.png" width="104" height="23" class="d-inline-block align-top" alt="">
         </a>
@@ -37,129 +37,142 @@
             <a href="#button_container" class="get-start">GET START NOW</a>
         </div>
     </div>
-    <div class="ui labeled icon mini menu" id="button_container" style="margin: 0px;background: #8d69f9;border-color:white;border-radius: 0%;height: 60px;overflow: scroll">
-        <button class="item" id="drawing-quadrilateral" style="color:white;">
-            <i class="pencil alternate icon " style="color:white;"></i> Quadrilateral
-        </button>
+
+
+    <div class="ui labeled icon tiny menu right" id="outter_container">
+        <div class="menu right" id="button_container">
+
+
+            <button class="item" id="add-text" style="color:white;">
+                <i class="pencil alternate icon " style="color:white;"></i> Add Text
+            </button>
+
+            <div id="undoRedoGroup">
+                <button class="undo">Undo</button>
+                <button class="redo">Redo</button>
+            </div>
+
+            <button class="item" id="clear" style="color:white;">
+                <i class="pencil alternate icon " style="color:white;"></i> Clear
+            </button>
+
+            <button class="item">
+
+                <div class="fas fa-palette " style="color:white;">
+                    Background Color
+                    <br/>
+                    <input class="jscolor" id="backgroundColor" />
+                </div>
+            </button>
+            </button>
+
+            <button class="item">
+                <div style="color:white;">
+                    <i class="fas fa-palette" style="font-size: 1.5em; padding: 1.5px;"></i>
+
+                    <div style="padding: 5px;">Object Color</div>
+
+                    <input class="jscolor " id="colorStroke" />
+                </div>
+            </button>
+
+            <button class="item">
+
+                <label for="uploadImage" class="custom-file-upload">
+                    <i class="upload icon" style="font-size: 1.5em"></i>
+                </label>
+                <input id="uploadImage" type="file" name="photo" />
+
+            </button>
+
+            <button class="item">
+
+                <a id="download" href="#" download="my-file-name.jpeg">
+                    <i class="download icon" style="font-size: 1.5em; color:white"></i>
+                </a>
+            </button>
+
+        </div>
+    </div>
+
+    <div class="ui vertical labeled icon tiny menu" id="button_vcontainer">
+
+
         <button class="item" id="free-draw" style="color:white;">
             <i class="pencil alternate icon " style="color:white;"></i> Free Draw
         </button>
 
-
         <button class="item" id="straight-line" style="color:white;">
             <i class="pencil alternate icon " style="color:white;"></i> Straight Line
         </button>
+
         <button class="item" id="drawing-ellipse" style="color:white;">
             <i class="pencil alternate icon " style="color:white;"></i> Ellipse
         </button>
+
+        <button class="item" id="drawing-quadrilateral" style="color:white;">
+            <i class="pencil alternate icon " style="color:white;"></i> Quadrilateral
+        </button>
+
         <button class="item" id="drawing-quadratic" style="color:white;">
             <i class="pencil alternate icon " style="color:white;"></i> Q. Curve
         </button>
+
         <button class="item" id="erase" style="color:white;">
             <i class="pencil alternate icon " style="color:white;"></i> Eraser
         </button>
+
         <button class="item" id="drawing-style" style="color:white;">
             <i class="pencil alternate icon " style="color:white;"></i> Pen style
         </button>
+
         <div class="item slideContainer " style="color:white;">
             <label for="pensize ">Stroke width</label>
             <input type="range" min="1" max="40" value="5" class="slider " id="pensize" />
         </div>
+
         <button class="item" id="bezier-curve" style="color:white;">
             <i class="pencil alternate icon " style="color:white;"></i> Bezier Curve
         </button>
+
         <button class="item" id="polygon" style="color:white;">
             <i class="pencil alternate icon " style="color:white;"></i> Polygon
         </button>
-        <button class="item" id="clear" style="color:white;">
-            <i class="pencil alternate icon " style="color:white;"></i> Clear
-        </button>
-        <button class="item" id="add-text" style="color:white;">
-            <i class="pencil alternate icon " style="color:white;"></i> Add Text
-        </button>
-        <button class="item">
-
-            <div class="fas fa-palette " style="color:white;">
-                Background Color
-                <br/>
-                <input type="color" class="jscolor" id="backgroundColor" />
-            </div>
-        </button>
-        </button>
-        <button class="item">
-            <div class="fas fa-palette " style="color:white;">
-                Object Color
-                <br/>
-                <input class="jscolor " id="colorStroke" />
-            </div>
-        </button>
-        <button class="item">
-            <i class="pencil alternate icon " style="color:white;"></i> Upload
-            <input id="uploadImage" type="file" name="photo" />
-        </button>
-
-        <div id="undoRedoGroup">
-            <button class="undo">Undo</button>
-            <button class="redo">Redo</button>
-        </div>
-
-
-        <button class="item">
-            <a class="btn btn-info fas fa-arrow-down" id="download" href="#" download="my-file-name.jpeg">
-            </a>
-            </button>
-
-
-            =======
-            <button class="item">
-                <a class="btn btn-info fas fa-arrow-down" id="download" href="#" download="my-file-name.jpeg">
-                </a>
-                <<<<<<< Updated upstream </button>
-                    =======
-            </button>
-            </button> --> >>>>>>> Stashed changes >>>>>>> Stashed changes
 
     </div>
 
 
 
-    <!-- <div class="buttons ">
-        <button class="btn btn-info fas fa-square-full " id="drawing-quadrilateral">Quadrilateral</button>
-        <button class="btn btn-info fas fa-pencil-alt ">Free Draw</button>
-        <button class="btn btn-info fas fa-ruler " id="straight-line">Straight Line</button>
-        <button class="btn btn-info fas far fa-circle " id="drawing-ellipse">Ellipse</button>
-        <button class="btn btn-info fab fa-cuttlefish " id="drawing-quadratic">Q. Curve</button>
-        <button class="btn btn-info fas fa-eraser " id="erase">Eraser</button>
-        <button class="btn btn-info fas fa-eye-dropper " id="drawing-style">Pen style</button>
-        <button class="btn btn-info fas fa-i-cursor " id="bezier-curve">Bezier Curve</button>
 
-        <button class="btn btn-info fas fa-retweet " id="polygon">Polygon</button>
-        <button class="btn btn-info fas fa-eraser " id="clear">Clear</button>
-        <button class="btn btn-info fas fa-pencil-alt " id="add-text">AddText</button>
-
-        <input class="jscolor " id="colorStroke" />
-        <div class="fas fa-palette ">
-            Change the background
-            <input class="jscolor" id="backgroundColor" />
-        </div>
-        <button class = "btn btn-info fas fa-arrow-down" id="download">
-            <a  href="#" download="my-file-name.png"> 
-                </a>
-        </button>
-
-</div> -->
-
-
-    <div id="canvas-container ">
-        <canvas id="canvas-background" class="canvas " width='1480px' height='700px'></canvas>
-        <canvas id="preview-canvas" class="canvas " width='1480px' height='700px'></canvas>
-        <canvas id="canvas-real" class="canvas " width='1480px' height='700px'></canvas>
-        <canvas id="canvas-draft" class="canvas " width='1480px' height='700px'></canvas>
+    <div id="canvas-container">
+        <canvas id="canvas-background" class="canvas " width='1480px' height='645.5px'></canvas>
+        <canvas id="preview-canvas" class="canvas " width='1480px' height='645.5px'></canvas>
+        <canvas id="canvas-real" class="canvas " width='1480px' height='645.5px'></canvas>
+        <canvas id="canvas-draft" class="canvas " width='1480px' height='645.5px'></canvas>
         <input id="textInput" type="text" value="">
 
     </div>
 
+    <footer>
 
+        <div class="footer-margin">
+            <div class="social-footer">
+                <a href="https://www.facebook.com/">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+            </div>
+            <div class="copyright">© Copyright 2018 Group A. All Rights Reserved.</div>
+
+
+
+        </div>
+
+
+    </footer>
 
     <script type='text/javascript' src="https://code.jquery.com/jquery-3.2.1.js "></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa "
@@ -232,12 +245,12 @@
         $('#polygon').click(() => {
             currentFunction = new DrawingPolygon(contextReal, contextDraft);
         });
-        
-          $('#clear').click(() => {
+
+        $('#clear').click(() => {
             currentFunction = new Clear(contextReal, contextDraft);
         });
 
-         $('#add-text').click(() => {
+        $('#add-text').click(() => {
             currentFunction = new AddText(contextReal, contextDraft);
         });
 
