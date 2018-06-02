@@ -44,26 +44,39 @@
 
 
             <button class="item" id="add-text" style="color:white;">
-                <i class="pencil alternate icon " style="color:white;"></i> Add Text
+                <i class="font icon " style="color:white;"></i> Add Text
             </button>
 
-            <div id="undoRedoGroup">
-                <button class="undo">Undo</button>
-                <button class="redo">Redo</button>
+            <div class="item slideContainer " style="color:white;">
+                <label for="pensize ">Stroke width</label>
+                <input type="range" min="1" max="40" value="5" class="slider " id="pensize" />
             </div>
 
+
+            <button class="item" id="undoRedoGroup" style="color:white;">
+                <i class="undo icon " style="color:white;"></i> Undo
+            </button>
+
+            <button class="item" id="undoRedoGroup" style="color:white;">
+                <i class="undo icon " style="color:white;"></i> Redo
+            </button>
+
+
             <button class="item" id="clear" style="color:white;">
-                <i class="pencil alternate icon " style="color:white;"></i> Clear
+                <i class="trash alternate outline icon " style="color:white;"></i> Clear
             </button>
 
             <button class="item">
 
-                <div class="fas fa-palette " style="color:white;">
-                    Background Color
-                    <br/>
-                    <input class="jscolor" id="backgroundColor" />
+                <div style="color:white;">
+                    <i class="fas fa-palette" style="font-size: 1.5em; padding: 1.5px;"></i>
+
+                    <div style="padding: 5px;">Background Color</div>
+
+                    <input class="jscolor " id="backgroundColor" />
                 </div>
             </button>
+
             </button>
 
             <button class="item">
@@ -103,41 +116,42 @@
         </button>
 
         <button class="item" id="straight-line" style="color:white;">
-            <i class="pencil alternate icon " style="color:white;"></i> Straight Line
+            <i class="window minimize icon " style="color:white;"></i> Straight Line
         </button>
 
         <button class="item" id="drawing-ellipse" style="color:white;">
-            <i class="pencil alternate icon " style="color:white;"></i> Ellipse
+            <i class="circle outline icon " style="color:white;"></i> Ellipse
         </button>
 
         <button class="item" id="drawing-quadrilateral" style="color:white;">
-            <i class="pencil alternate icon " style="color:white;"></i> Quadrilateral
+            <i class="square outline icon " style="color:white;"></i> Quadrilateral
         </button>
 
         <button class="item" id="drawing-quadratic" style="color:white;">
-            <i class="pencil alternate icon " style="color:white;"></i> Q. Curve
+            <img src="assets/img/icon5.png">
+            <br/>
+            <br/>
+            <i style="color:white;"></i> Q. Curve
+
         </button>
 
         <button class="item" id="erase" style="color:white;">
-            <i class="pencil alternate icon " style="color:white;"></i> Eraser
+            <i class="eraser icon " style="color:white;"></i> Eraser
         </button>
 
         <button class="item" id="drawing-style" style="color:white;">
-            <i class="pencil alternate icon " style="color:white;"></i> Pen style
+            <i class="paint brush icon " style="color:white;"></i> Pen style
         </button>
 
-        <div class="item slideContainer " style="color:white;">
-            <label for="pensize ">Stroke width</label>
-            <input type="range" min="1" max="40" value="5" class="slider " id="pensize" />
-        </div>
-
         <button class="item" id="bezier-curve" style="color:white;">
-            <i class="pencil alternate icon " style="color:white;"></i> Bezier Curve
+            <i class="share alternate icon " style="color:white;"></i> Bezier Curve
         </button>
 
         <button class="item" id="polygon" style="color:white;">
-            <i class="pencil alternate icon " style="color:white;"></i> Polygon
-        </button>
+            <img src="assets/img/icon3.png">
+            <br/>
+            <br/>
+            <i style="color:white;"></i> Polygon
 
     </div>
 
@@ -145,10 +159,10 @@
 
 
     <div id="canvas-container">
-        <canvas id="canvas-background" class="canvas " width='1480px' height='645.5px'></canvas>
-        <canvas id="preview-canvas" class="canvas " width='1480px' height='645.5px'></canvas>
-        <canvas id="canvas-real" class="canvas " width='1480px' height='645.5px'></canvas>
-        <canvas id="canvas-draft" class="canvas " width='1480px' height='645.5px'></canvas>
+        <canvas id="canvas-background" class="canvas " width='1480px' height='592px'></canvas>
+        <canvas id="preview-canvas" class="canvas " width='1480px' height='592px'></canvas>
+        <canvas id="canvas-real" class="canvas " width='1480px' height='592px'></canvas>
+        <canvas id="canvas-draft" class="canvas " width='1480px' height='592px'></canvas>
         <input id="textInput" type="text" value="">
 
     </div>
