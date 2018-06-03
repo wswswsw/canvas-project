@@ -129,8 +129,8 @@ input[type="file"] {
 #outter_container {
   margin: 0px;
   background: #8d69f9;
-  border: none;
-  border-radius: 0;
+  /* border: none; */
+  /* border-radius: 0; */
   z-index: 11;
 }
 
@@ -138,13 +138,13 @@ input[type="file"] {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0px;
+  /* margin: 0px; */
   background: #8d69f9;
-  border: 0;
-  border-radius: 0;
-  height: 84px;
+  /* border: 0;
+  border-radius: 0; */
+  /* height: 84px; */
   z-index: 11;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 #button_vcontainer {
@@ -153,8 +153,8 @@ input[type="file"] {
   margin: 0;
   position: absolute;
   background: #7950f5;
-  border: 0;
-  border-radius: 0;
+  /* border: 0; */
+  /* border-radius: 0; */
   width: 94px;
   z-index: 9;
 }
@@ -175,7 +175,7 @@ footer {
 
 .footer-margin {
   width: 1140px;
-  margin: 30px auto;
+  margin: 3px auto;
   line-height: 70px;
 }
 

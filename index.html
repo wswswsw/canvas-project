@@ -101,12 +101,6 @@
             <i class="pencil alternate icon " style="color:white;"></i> Free Draw
         </button>
 
-        <button class="item" id="drawing-dotted" style="color:white;">
-            <i class="fas fa-ellipsis-h " style="color:white;"></i> 
-            <br/>
-            Dotted Line
-        </button>
-
         <button class="item" id="straight-line" style="color:white;">
             <i class="window minimize icon " style="color:white;"></i> Straight Line
         </button>
@@ -130,9 +124,9 @@
             <i class="eraser icon " style="color:white;"></i> Eraser
         </button>
 
-        <button class="item" id="drawing-style" style="color:white;">
+        <!-- <button class="item" id="drawing-style" style="color:white;">
             <i class="paint brush icon " style="color:white;"></i> Pen style
-        </button>
+        </button> -->
 
         <button class="item" id="bezier-curve" style="color:white;">
             <i class="share alternate icon " style="color:white;"></i> Bezier Curve
@@ -184,7 +178,6 @@
     <script src="assets/library/jscolor.js "></script>
     <script type='text/javascript' src="assets/data/erase.js "></script>
     <script type='text/javascript' src="assets/data/free-draw.js "></script>
-    <script type='text/javascript' src="assets/data/drawing-dotted.js "></script>
     <script type='text/javascript' src="assets/data/drawing-quadrilateral.js "></script>
     <script type='text/javascript' src="assets/data/straight-line.js "></script>
     <script type='text/javascript' src="assets/data/drawing-ellipse.js "></script>
@@ -254,10 +247,6 @@
 
         $('#add-text').click(() => {
             currentFunction = new AddText(contextReal, contextDraft);
-        });
-
-        $('#drawing-dotted').click(() => {
-            currentFunction = new DrawingDotted(contextReal, contextDraft);
         });
 
 
