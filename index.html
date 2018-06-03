@@ -178,7 +178,7 @@
     <script type='text/javascript' src="assets/data/straight-line.js "></script>
     <script type='text/javascript' src="assets/data/drawing-ellipse.js "></script>
     <script type='text/javascript' src="assets/data/drawing-quadratic.js "></script>
-    <script type='text/javascript' src="assets/data/stroke.js "></script>
+    <script type='text/javascript' src="assets/data/stroke-width.js "></script>
     <script type='text/javascript' src="assets/library/exif.js "></script>
     <script type='text/javascript' src="assets/library/canvas-image-uploader.js "></script>
     <script type='text/javascript' src="assets/data/uploadImage.js "></script>
@@ -213,10 +213,6 @@
 
         $('#drawing-quadratic').click(() => {
             currentFunction = new DrawingQuadratic(contextReal, contextDraft);
-        });
-
-        $('#stroke').click(() => {
-            currentFunction = new Stroke(contextReal, contextDraft);
         });
 
         $("#strokewidth, #pensize ").change(function () {
