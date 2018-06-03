@@ -20,29 +20,67 @@ Features:
 - Upload Function
 - Download Function
 
+
 Notes on use:
 
 - Altering the stroke width automatically selects the Free Draw function.
-
 - The user must click outside the text box to end the Add Text function.
-
-- The Bezier Curve function automatically drops four adjustable control points where the canvas is clicked. The location of the click will be the centre of the bezier curve.
-
-- The user must double click to exit the Bezier Curve funciton.
-
-- The user must resize uploaded images to fit the canvas size. 
-
+- The Bezier Curve function automatically drops four adjustable control points when the canvas is clicked. The location of the click will be the centre of the bezier curve.
+- The user must double click to end the Bezier Curve funciton.
+- The user must resize images to fit the canvas size prior to uploading. 
 - The user must click on the canvas after changing the stroke width to activate it.
+
 
 Known bugs:
 
 - The clear function does not clear uploaded photos.
+- Line width is only applied when the fucntion is ended for the Straight Line, Ellipse, Quadrilateral, Q. Curve, Bezier Curve and Polgon functions.
+- Draft text and real text size are inconsistent. 
 
 
+Future features:
+
+- Dotted line
+- Triangle
+- Undo/redo functions
+- Move object functions
+- Fill shape color fucnction
+- Adjustable font size
 
 
+Built using:
+
+- Canvas Image Uploader 
+https://www.npmjs.com/package/canvas-image-uploader
+
+- JS Color
+http://jscolor.com/
+
+- Font Awesome
+https://fontawesome.com/
+
+- Bootstrap CDN
+https://www.bootstrapcdn.com/
+
+- Semantic UI
+https://semantic-ui.com/
+
+- JQuery
+https://jquery.com/
 
 
+Contributors:
+
+- Marco Cheng
+- Leo Ho
+- Wictor Willumsen
+- Sonya Wong
 
 
+Special thanks:
 
+- Mom and Dad
+- All the staff at Accelerate
+- The Academy
+- God (Brock Wei)
+- All the fans who supported us from the very beggining. Your belief is the foundation of our success!
