@@ -22,7 +22,7 @@ var undoObject = {
         if (undoObject.actionCount > 1) {
             undoObject.actionCount--;
             undoObject.savePoint = undoObject.actionCount;
-            contextReal.clearRect(0, 0, canvasReal.width, canvasReal.height);
+            // contextReal.clearRect(0, 0, canvasReal.width, canvasReal.height);
             contextReal.drawImage(undoObject.states[undoObject.actionCount - 1], 0, 0);
         }
     },
@@ -31,7 +31,7 @@ var undoObject = {
         if (undoObject.actionCount == undoObject.savePoint && undoObject.actionCount < undoObject.states.length) {
             undoObject.actionCount++;
             undoObject.savePoint++;
-            contextReal.clearRect(0, 0, canvasReal.width, canvasReal.height);
+            // contextReal.clearRect(0, 0, canvasReal.width, canvasReal.height);
             contextReal.drawImage(undoObject.states[undoObject.actionCount - 1], 0, 0);
         }
         else if (undoObject.actionCount != undoObject.savePoint) {

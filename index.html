@@ -5,7 +5,7 @@
 <head>
 
     <meta charset="utf-8">
-    <title>Canvas Testing</title>
+    <title>Group A- Canvas Project</title>
     <meta name="viewport" content="width= device-width, initial-scale= 1.0" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
@@ -40,7 +40,6 @@
     <div class="ui labeled icon tiny menu right" id="outter_container">
         <div class="menu right" id="button_container">
 
-
             <button class="item" id="add-text" style="color:white;">
                 <i class="font icon " style="color:white;"></i> Add Text
             </button>
@@ -50,7 +49,6 @@
                 <input type="range" min="1" max="40" value="5" class="slider " id="pensize" />
             </div>
 
-
             <button class="item" id="undoRedoGroup" style="color:white;">
                 <i class="undo icon " style="color:white;"></i> Undo
             </button>
@@ -59,13 +57,11 @@
                 <i class="undo icon " style="color:white;"></i> Redo
             </button>
 
-
             <button class="item" id="clear" style="color:white;">
                 <i class="trash alternate outline icon " style="color:white;"></i> Clear
             </button>
 
             <button class="item">
-
                 <div style="color:white;">
                     <i class="fas fa-palette" style="font-size: 1.5em; padding: 1.5px;"></i>
 
@@ -73,8 +69,6 @@
 
                     <input class="jscolor " id="backgroundColor" />
                 </div>
-            </button>
-
             </button>
 
             <button class="item">
@@ -178,9 +172,6 @@
 
             </div>
             <div class="copyright">© Copyright 2018 Group A. All Rights Reserved.</div>
-
-
-
         </div>
 
 
@@ -266,7 +257,7 @@
             currentFunction = new AddText(contextReal, contextDraft);
         });
 
-        undoObject.states[ndoObject.actionCount] = new Image();
+        undoObject.states[undoObject.actionCount] = new Image();
         undoObject.states[undoObject.actionCount].src = canvasReal.toDataURL();
         undoObject.actionCount++;
 
