@@ -50,17 +50,17 @@
                 <input type="range" min="1" max="40" value="5" class="slider " id="pensize" />
             </div>
 
-            <button class="item" id="undoRedoGroup" style="color:white;">
+            <button class="item" style="color:white;">
                 <i class="undo icon " style="color:white;"></i> Undo
             </button>
 
-            <button class="item" id="undoRedoGroup" style="color:white;">
-                <i class="undo icon " style="color:white;"></i> Redo
+            <!-- <button class="item"  style="color:white;">
+                <i id= "undo" class="redo icon " style="color:white;"></i> Redo
             </button>
 
             <button class="item" id="clear" style="color:white;">
-                <i class="trash alternate outline icon " style="color:white;"></i> Clear
-            </button>
+                <i id= "redo" class="trash alternate outline icon " style="color:white;"></i> Clear
+            </button> -->
 
             <button class="item">
                 <div style="color:white;">
@@ -174,7 +174,6 @@
         crossorigin="anonymous "></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
     <script type='text/javascript' src="assets/data/canvas-settings.js "></script>
-    <script type='text/javascript' src="assets/data/undo.js "></script>
     <script type='text/javascript' src="assets/data/canvas-common.js "></script>
     <script src="assets/library/jscolor.js "></script>
     <script type='text/javascript' src="assets/data/erase.js "></script>
@@ -250,9 +249,6 @@
             currentFunction = new AddText(contextReal, contextDraft);
         });
 
-        undoObject.states[undoObject.actionCount] = new Image();
-        undoObject.states[undoObject.actionCount].src = canvasReal.toDataURL();
-        undoObject.actionCount++;
 
     </script>
 

@@ -26,11 +26,5 @@ class DrawingQuadrilateral extends PaintFunction {
 
     onMouseLeave() { }
     onMouseEnter() { }
-    onFinish() { }
 
-    onFinish(){
-        undoObject.states[undoObject.actionCount] = new Image();
-        undoObject.states[undoObject.actionCount].src = canvasReal.toDataURL();
-        undoObject.actionCount++;
-    }
 }
