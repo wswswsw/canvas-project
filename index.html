@@ -22,6 +22,7 @@
 
 <body>
 
+    <!-- NAVBAR -->
     <div class="topnav sticky">
         <a class="topnavbar" href="#">
             <img src="assets/img/icon2.png" width="104" height="23" class="d-inline-block align-top" alt="">
@@ -36,7 +37,7 @@
         </div>
     </div>
 
-
+    <!-- HORIZONTAL MENU -->
     <div class="ui labeled icon tiny menu right" id="outter_container">
         <div class="menu right" id="button_container">
 
@@ -64,9 +65,7 @@
             <button class="item">
                 <div style="color:white;">
                     <i class="fas fa-palette" style="font-size: 1.5em; padding: 1.5px;"></i>
-
                     <div style="padding: 5px;">Background Color</div>
-
                     <input class="jscolor " id="backgroundColor" />
                 </div>
             </button>
@@ -74,24 +73,19 @@
             <button class="item">
                 <div style="color:white;">
                     <i class="fas fa-palette" style="font-size: 1.5em; padding: 1.5px;"></i>
-
-                    <div style="padding: 5px;">Object Color</div>
-
+                    <div style="padding: 5px;">Pen Color</div>
                     <input class="jscolor " id="colorStroke" />
                 </div>
             </button>
 
             <button class="item">
-
                 <label for="uploadImage" class="custom-file-upload">
                     <i class="upload icon" style="font-size: 1.5em"></i>
                 </label>
                 <input id="uploadImage" type="file" name="photo" />
-
             </button>
 
             <button class="item">
-
                 <a id="download" href="#" download="image.jpeg">
                     <i class="download icon" style="font-size: 1.5em; color:white"></i>
                 </a>
@@ -100,8 +94,8 @@
         </div>
     </div>
 
+    <!-- VERTICAL MENU -->
     <div class="ui vertical labeled icon tiny menu" id="button_vcontainer">
-
 
         <button class="item" id="free-draw" style="color:white;">
             <i class="pencil alternate icon " style="color:white;"></i> Free Draw
@@ -124,7 +118,6 @@
             <br/>
             <br/>
             <i style="color:white;"></i> Q. Curve
-
         </button>
 
         <button class="item" id="erase" style="color:white;">
@@ -144,13 +137,15 @@
             <br/>
             <br/>
             <i style="color:white;"></i> Polygon
+        </button>
 
     </div>
 
 
 
-
+    <!-- CANVAS INNIT -->
     <div id="canvas-container">
+
         <canvas id="canvas-background" class="canvas " width='1678px' height='591px'></canvas>
         <canvas id="preview-canvas" class="canvas " width='1678px' height='591px'></canvas>
         <canvas id="canvas-real" class="canvas " width='1678px' height='591px'></canvas>
@@ -160,7 +155,6 @@
     </div>
 
     <footer>
-
         <div class="footer-margin">
             <div class="social-footer">
                 <a href="https://www.facebook.com/">
@@ -169,14 +163,12 @@
                 <a href="https://www.instagram.com/">
                     <i class="fab fa-instagram"></i>
                 </a>
-
             </div>
             <div class="copyright">© Copyright 2018 Group A. All Rights Reserved.</div>
         </div>
-
-
     </footer>
 
+    <!-- JS SCRIPTS -->
     <script type='text/javascript' src="https://code.jquery.com/jquery-3.2.1.js "></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js " integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa "
         crossorigin="anonymous "></script>
@@ -202,6 +194,7 @@
     <script type='text/javascript' src="assets/data/add-text.js "></script>
     <script type='text/javascript' src="assets/data/download.js "></script>
 
+    <!-- CLASS DEFINITIONS -->
     <script type='text/javascript'>  
 
         $('#drawing-quadrilateral').click(() => {
