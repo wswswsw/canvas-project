@@ -46,6 +46,7 @@ Future features:
 - Move object functions
 - Fill shape color fucnction
 - Adjustable font size
+- Mobile responisivity
 
 
 Built using:
