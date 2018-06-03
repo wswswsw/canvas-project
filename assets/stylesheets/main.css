@@ -74,12 +74,7 @@ body {
 
 .canvas {
   border: 1px dotted black;
-  /* background-color: ivory; dont add background into canvas*/
   position: absolute;
-  /* top: 333px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px; */
 }
 
 #canvas-draft {
