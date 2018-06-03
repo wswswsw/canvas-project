@@ -6,7 +6,7 @@ class AddText extends PaintFunction{
         this.fontWeight = 600; //font weight
         this.fontSize = 30; //font size
         this.fontStyle = "Arial"; //font-family
-        this.fillStyle = "black"; //font color
+        this.fillStyle = strokeColor; //font color
         this.textX = [];
         this.textY = [];
     }
@@ -33,6 +33,7 @@ class AddText extends PaintFunction{
     outputText(ctx){
         let inputText = $('#textInput').val();
         this.fontSize = 30; //font size
+        this.contextReal.fillStyle = strokeColor;
         contextReal.fillText(inputText,this.textX[0],this.textY[0]+parseInt(this.fontSize));
     
        //contextReal.stroke();
