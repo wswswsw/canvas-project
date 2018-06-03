@@ -41,10 +41,6 @@
     <div class="ui labeled icon tiny menu right" id="outter_container">
         <div class="menu right" id="button_container">
 
-            <button class="item" id="add-text" style="color:white;">
-                <i class="font icon " style="color:white;"></i> Add Text
-            </button>
-
             <div class="item slideContainer " style="color:white;">
                 <label for="pensize ">Stroke width</label>
                 <input type="range" min="1" max="40" value="5" class="slider " id="pensize" />
@@ -101,6 +97,10 @@
             <i class="pencil alternate icon " style="color:white;"></i> Free Draw
         </button>
 
+        <button class="item" id="add-text" style="color:white;">
+            <i class="font icon " style="color:white;"></i> Add Text
+        </button>
+
         <button class="item" id="straight-line" style="color:white;">
             <i class="window minimize icon " style="color:white;"></i> Straight Line
         </button>
@@ -123,10 +123,6 @@
         <button class="item" id="erase" style="color:white;">
             <i class="eraser icon " style="color:white;"></i> Eraser
         </button>
-
-        <!-- <button class="item" id="drawing-style" style="color:white;">
-            <i class="paint brush icon " style="color:white;"></i> Pen style
-        </button> -->
 
         <button class="item" id="bezier-curve" style="color:white;">
             <i class="share alternate icon " style="color:white;"></i> Bezier Curve
@@ -183,7 +179,6 @@
     <script type='text/javascript' src="assets/data/drawing-ellipse.js "></script>
     <script type='text/javascript' src="assets/data/drawing-quadratic.js "></script>
     <script type='text/javascript' src="assets/data/stroke.js "></script>
-    <script type='text/javascript' src="assets/data/drawing-style.js "></script>
     <script type='text/javascript' src="assets/library/exif.js "></script>
     <script type='text/javascript' src="assets/library/canvas-image-uploader.js "></script>
     <script type='text/javascript' src="assets/data/uploadImage.js "></script>
@@ -227,10 +222,6 @@
         $("#strokewidth, #pensize ").change(function () {
             let width = this.value || $(this).value
             currentFunction = new Stroke(contextReal, contextDraft, width);
-        });
-
-        $('#drawing-style').click(() => {
-            currentFunction = new DrawingStyle(contextReal, contextDraft);
         });
 
         $('#bezier-curve').click(() => {
