@@ -52,21 +52,27 @@ Future features:
 Built using:
 
 - Canvas Image Uploader 
+
 https://www.npmjs.com/package/canvas-image-uploader
 
 - JS Color
+
 http://jscolor.com/
 
 - Font Awesome
+
 https://fontawesome.com/
 
 - Bootstrap CDN
+
 https://www.bootstrapcdn.com/
 
 - Semantic UI
+
 https://semantic-ui.com/
 
 - JQuery
+
 https://jquery.com/
 
 
