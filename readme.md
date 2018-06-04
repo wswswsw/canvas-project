@@ -1,8 +1,8 @@
 Group A Canvas Project
 
-group-a-canvas-project.surge.sh
-
 This is a basic browser-based canvas app based loosely on the Paint program from Windows.
+
+Check it out at: https://group-a-canvas-project.surge.sh
 
 Features:
 
