@@ -9,7 +9,7 @@ $("#uploadImage").bind("change", function onImageChanged(e) {
   if (files) {
     file = files[0];
     var $canvas = $("<canvas>");
-    uploader.readImageToCanvas(file, $canvas, function() {
+    uploader.readImageToCanvas(file, $canvas, function () {
       // uploader.saveCanvasToImageData($canvas[0]);
 
       var canvas = $canvas[0];

@@ -19,10 +19,10 @@ class Stroke extends PaintFunction {
     this.draw(coord[0], coord[1]);
   }
 
-  onMouseMove() {}
-  onMouseUp() {}
-  onMouseLeave() {}
-  onMouseEnter() {}
+  onMouseMove() { }
+  onMouseUp() { }
+  onMouseLeave() { }
+  onMouseEnter() { }
 
   draw(x, y) {
     this.context.lineTo(x, y);

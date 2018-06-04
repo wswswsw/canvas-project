@@ -8,7 +8,7 @@ class FreeDraw extends PaintFunction {
     onMouseDown(coord, event) {
         this.context.strokeStyle = strokeColor;
         this.context.lineJoin = "round";
-        this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
+        this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
         this.context.beginPath();
         this.context.moveTo(coord[0], coord[1]);
         this.draw(coord[0], coord[1]);
