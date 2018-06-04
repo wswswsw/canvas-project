@@ -4,7 +4,7 @@ class Clear extends PaintFunction {
         this.contextReal = contextReal;
         this.contextDraft = contextDraft;
         this.contextReal.clearRect(0, 0, canvasReal.width, canvasReal.height);
-        this.contextReal.clearRect(0, 0, canvasReal.width, canvasReal.height);
+        this.contextDraft.clearRect(0, 0, canvasReal.width, canvasReal.height);
 
     };
 }

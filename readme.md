@@ -33,9 +33,10 @@ Notes on use:
 
 Known bugs:
 
-- The clear function does not clear uploaded photos.
+- The clear function does not clear uploaded photos and the background color.
 - Line width is only applied when the fucntion is ended for the Straight Line, Ellipse, Quadrilateral, Q. Curve, Bezier Curve and Polgon functions.
 - Draft text and real text size are inconsistent. 
+- The download function ignores the background color by creating a .PNG file.
 
 
 Future features:
