@@ -16,7 +16,7 @@ Features:
 - Bezier Curve
 - Polygon
 - Adjustable stroke width
-- Clear function
+- Clear Function
 - Background color selector
 - Stroke color selector
 - Upload Function
@@ -51,7 +51,6 @@ Future features:
 - Adjustable font size
 - Mobile responisivity
 - Hot keys
-- Color picker
 - Filters
 - Resize canvas
 - Spray function
