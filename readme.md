@@ -52,6 +52,8 @@ Future features:
 - Mobile responisivity
 - Hot keys
 - Color picker
+- Filters
+- Resize canvas
 
 
 Built using:
