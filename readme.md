@@ -51,6 +51,7 @@ Future features:
 - Adjustable font size
 - Mobile responisivity
 - Hot keys
+- Color picker
 
 
 Built using:
