@@ -55,6 +55,7 @@ Future features:
 - Filters
 - Resize canvas
 - Spray function
+- Save function
 
 
 Built using:
