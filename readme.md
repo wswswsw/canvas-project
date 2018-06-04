@@ -57,6 +57,7 @@ Future features:
 - Spray function
 - Save function
 - Vector grapihcs
+- Draw by numbers
 
 
 Built using:
