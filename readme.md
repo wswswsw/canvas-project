@@ -54,6 +54,7 @@ Future features:
 - Color picker
 - Filters
 - Resize canvas
+- Spray function
 
 
 Built using:
