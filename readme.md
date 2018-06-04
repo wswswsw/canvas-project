@@ -56,6 +56,7 @@ Future features:
 - Resize canvas
 - Spray function
 - Save function
+- Vector grapihcs
 
 
 Built using:
