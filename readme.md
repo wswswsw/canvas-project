@@ -51,6 +51,7 @@ Future features:
 - Adjustable font size
 - Mobile responisivity
 - Hot keys
+- Paint Bucket
 - Filters
 - Resize canvas
 - Spray function
