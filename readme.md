@@ -50,6 +50,7 @@ Future features:
 - Fill shape color fucnction
 - Adjustable font size
 - Mobile responisivity
+- Hot keys
 
 
 Built using:
