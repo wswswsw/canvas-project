@@ -67,8 +67,11 @@ class DrawingBezier extends PaintFunction {
         let e = {};
         e.x = coord[0];
         e.y = coord[1]
+
+        // This chunk throws error "Cannot read property 'x' of undefined", but removing it breaks the functions. Error is only produced when using Bezier curve after other functions.
         this.point[this.drag].x += e.x - this.dPoint.x;
         this.point[this.drag].y += e.y - this.dPoint.y;
+
         this.dPoint = e;
         this.draw(this.contextDraft);
     }
