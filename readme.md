@@ -1,6 +1,6 @@
 Group A Canvas Project
 
-This is a very basic brower-based canvas app based loosely on the Paint program from Windows.
+This is a basic browser-based canvas app based loosely on the Paint program from Windows.
 
 Features:
 
@@ -52,27 +52,21 @@ Future features:
 Built using:
 
 - Canvas Image Uploader 
-
 https://www.npmjs.com/package/canvas-image-uploader
 
 - JS Color
-
 http://jscolor.com/
 
 - Font Awesome
-
 https://fontawesome.com/
 
 - Bootstrap CDN
-
 https://www.bootstrapcdn.com/
 
 - Semantic UI
-
 https://semantic-ui.com/
 
 - JQuery
-
 https://jquery.com/
 
 
